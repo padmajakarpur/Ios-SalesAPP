@@ -1,0 +1,72 @@
+PODS:
+  - ACFloatingTextfield-Objc (1.7)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DLRadioButton (1.4.11)
+  - HMSegmentedControl (1.5.3)
+  - MXPagerView (0.2.1)
+  - MXParallaxHeader (0.6.1)
+  - MXSegmentedPager (3.3.0):
+    - HMSegmentedControl (= 1.5.3)
+    - MXPagerView (= 0.2.1)
+    - MXParallaxHeader (= 0.6.1)
+  - OneSignal (2.8.5)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - TTRangeSlider (1.0.5)
+  - UITextField_AutoSuggestion (0.3.0)
+
+DEPENDENCIES:
+  - ACFloatingTextfield-Objc (~> 1.6)
+  - AFNetworking (~> 3.0)
+  - DLRadioButton (~> 1.4)
+  - MXSegmentedPager
+  - OneSignal (< 3.0, >= 2.6.2)
+  - SDWebImage (~> 4.0)
+  - TTRangeSlider
+  - UITextField_AutoSuggestion
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ACFloatingTextfield-Objc
+    - AFNetworking
+    - DLRadioButton
+    - HMSegmentedControl
+    - MXPagerView
+    - MXParallaxHeader
+    - MXSegmentedPager
+    - OneSignal
+    - SDWebImage
+    - TTRangeSlider
+    - UITextField_AutoSuggestion
+
+SPEC CHECKSUMS:
+  ACFloatingTextfield-Objc: 8780c7a0d96b2039d8a60d3461a4bbcd22e3faf3
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DLRadioButton: 0d04b8259e7bfd886571a1e9173c73fee7118f50
+  HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  MXPagerView: ede184b5191b2ed689ccf05a750a9978cce42414
+  MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
+  MXSegmentedPager: a35ebaf939e1629f24db3bb26653c1c557362f59
+  OneSignal: 42dae269c7eca517aee34963820e1eb922390031
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  TTRangeSlider: 2f2ce4a33b32bb323c6575b9f5161c4664459c58
+  UITextField_AutoSuggestion: dca08de21c8de3f6054dda085087a04b5b326208
+
+PODFILE CHECKSUM: 87dd2ffc7764f40d9fb0859138324bada4a0ec0d
+
+COCOAPODS: 1.5.3

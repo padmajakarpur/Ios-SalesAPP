@@ -21,6 +21,8 @@
 @end
 @implementation AddbookingViewController
 @synthesize scrollView,step1btn,step2btn,step3btn,step4btn,nametxt,buildingtxt,sitestr,sitenamearr,sitenametoolbar,sitenamepickerview,collectioonview,step5btn,projectnamearr,projectnamestr,projectpickerview,projectnametoolbar,TakePhotoView,view2scrollview,schemearr,schemestr,schemetxt,schemetoolbar,schemepickerview,descontvaluetxt,discountremarktxt,revisedagrttxt,tableViewHome,custaddrtxt,custnametxt,custemailtxt,custmobnotxt,custSourcetxt,numberToolbarzip,view5scrollview,bankamountxt,typeofpayment,typeofpaymentstr,typeofpaymentoolbar,typeofpaymentpicker,Typeofpaymentarr,checktableview,addbtn,captureimgbtn,capturebookingbtn,remainingtxt,rmarktxt,chequeimage,bookingimage,indicator,siteidstr,unitsarr,flatyplbl2,unitlbl2,carlbl2,redcarpetlbl2,totalagrlbl2,totalarwlbl2,schemeidstr,agrementvaluetxt,registrationchartxt,stampdutytxt,gstlbltxt,legaldocchartxt,totalcosttxt,pamentschemetxt,handedovertotext,amounttxt,comefromstr,projectarr,revisedagrementvaluetxt,cibiltext,Customertypetxt,customertypestr,customertypepicker,customertypetoolbar,customertypearr,step3radiobtn,remaingbtn,businessdetailstxt,sourcetxt,sourcedict,sourcestr,sourcearr,sourcepicker,sourcetoolbar,paymentgateybtn,flooridstr,floorno,chequeinstrumentdatetxt,chequeimage2,chequeimage3,chequeimagecollectionview,imagerarr,datePicker,countrcodetxt,countrytoolbar,countrpicker,countryarr,countrstr,finalbookbtn,timer,approvebtn,chequeAmountxt,remainingamtdict,unitlbl,assignlbl,view4scrollview,bk_numstr,indexarray;
+
+NSMutableArray *colorNames;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -1846,8 +1848,9 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
     [_demoView.layer setMasksToBounds:YES];
     [_demoView.layer setBorderWidth:1.0];
     _demoView.layer.borderColor=[[UIColor blackColor]CGColor];
-    
-    NSMutableArray *colorNames=[[NSMutableArray alloc]init];
+    //remove comment
+   // NSMutableArray *colorNames=[[NSMutableArray alloc]init];
+    colorNames = [[NSMutableArray alloc]init];
     NSMutableArray *colors =[[NSMutableArray alloc]init];
     
     for (int i=0;i<unitsarr.count; i++) {
@@ -1863,13 +1866,16 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
 
         }
      else if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"0"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"1"]) {
-            [colors addObject:[UIColor redColor]];
+            //[colors addObject:[UIColor redColor]];
+         [colors addObject:[UIColor colorWithHexString:@"#cc0404"]];
         }
      else if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"2"] ||[[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"3"]) {
-         [colors addObject:[UIColor blueColor]];
+        // [colors addObject:[UIColor blueColor]];
+         [colors addObject:[UIColor colorWithHexString:@"#0000FF"]];
      }
      else if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"4"] ||[[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"5"]) {
-         [colors addObject:[UIColor greenColor]];
+         //[colors addObject:[UIColor greenColor]];
+         [colors addObject:[UIColor colorWithHexString:@"#008000"]];
      }
         else
         {
@@ -1919,7 +1925,7 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
             
         }else{
             NSString * title = colorNames[i];
-            if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"3"]){
+            if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"3"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"1"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"5"]){
                 title = [NSString stringWithFormat:@"%@p",colorNames[i]];
             }
             radioButton = [self createRadioButtonWithFrame:frame
@@ -2104,7 +2110,8 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
 {
     if (unitsarr.count<80) {
         DLRadioButton *radioButton = [[DLRadioButton alloc] initWithFrame:frame];
-        radioButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        //radioButton.titleLabel.font = [UIFont systemFontOfSize:18];//14
+        radioButton.titleLabel.font =   [UIFont fontWithName:@"Helvetica-Bold" size:14];
         [radioButton setAttributedTitle:title forState:UIControlStateNormal];
         [radioButton setTitleColor:color forState:UIControlStateNormal];
         radioButton.iconColor = color;
@@ -2118,7 +2125,8 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
     else
     {
         DLRadioButton *radioButton = [[DLRadioButton alloc] initWithFrame:frame];
-        radioButton.titleLabel.font = [UIFont systemFontOfSize:14];
+      //  radioButton.titleLabel.font = [UIFont systemFontOfSize:18];//14
+        radioButton.titleLabel.font =  [UIFont fontWithName:@"Helvetica-Bold" size:14];
         [radioButton setAttributedTitle:title forState:UIControlStateNormal];
         [radioButton setTitleColor:color forState:UIControlStateNormal];
         radioButton.iconColor = color;
@@ -2135,7 +2143,8 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
 {
     if (unitsarr.count<80) {
         DLRadioButton *radioButton = [[DLRadioButton alloc] initWithFrame:frame];
-        radioButton.titleLabel.font = [UIFont systemFontOfSize:14];
+       // radioButton.titleLabel.font = [UIFont systemFontOfSize:18];//14
+        radioButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
         [radioButton setTitle:title forState:UIControlStateNormal];
         [radioButton setTitleColor:color forState:UIControlStateNormal];
         radioButton.iconColor = color;
@@ -2149,7 +2158,9 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
     else
     {
         DLRadioButton *radioButton = [[DLRadioButton alloc] initWithFrame:frame];
-        radioButton.titleLabel.font = [UIFont systemFontOfSize:14];
+       // radioButton.titleLabel.font = [UIFont systemFontOfSize:18];//14
+        radioButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+
         [radioButton setTitle:title forState:UIControlStateNormal];
         [radioButton setTitleColor:color forState:UIControlStateNormal];
         radioButton.iconColor = color;
@@ -2164,7 +2175,9 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
 - (DLRadioButton *)createcheckboxWithFrame:(CGRect) frame Title:(NSString *)title Color:(UIColor *)color
 {
     DLRadioButton *radioButton = [[DLRadioButton alloc] initWithFrame:frame];
-    radioButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    //radioButton.titleLabel.font = [UIFont systemFontOfSize:18];//14
+    radioButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+
     [radioButton setTitle:title forState:UIControlStateNormal];
     [radioButton setTitleColor:color forState:UIControlStateNormal];
     radioButton.iconColor = color;
@@ -2429,9 +2442,22 @@ else if ([[userDict objectForKey:@"status"] isEqualToString:@"Rejected"])
             _ipprojectdic=[[NSMutableDictionary alloc]init];
             for (int i=0; i<unitsarr.count; i++) {
                 _selectedstr=[[unitsarr objectAtIndex:i]objectForKey:@"id"];
-                if ([_radiobtntxt isEqualToString:_selectedstr])
-                    _ipprojectdic=[unitsarr objectAtIndex:i];
+                //remove comment
+               // if ([_radiobtntxt isEqualToString:_selectedstr])
+                NSString * title = colorNames[i];
+                if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"3"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"1"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"5"]){
+                    title = [NSString stringWithFormat:@"%@p",colorNames[i]];                    NSString *substring = [_radiobtntxt substringToIndex:[_radiobtntxt length]-1];
+                  //_ipprojectdic=[unitsarr objectAtIndex:i];
+                if ([substring isEqualToString:_selectedstr])
+                //remove comment
+                   _ipprojectdic=[unitsarr objectAtIndex:i];
+
+                }else{
+                    if ([_radiobtntxt isEqualToString:_selectedstr])
+                        _ipprojectdic=[unitsarr objectAtIndex:i];
+                }
             }
+            //NSString *truncatedString = [str substringToIndex:[str length]-1];
 //            unit_status
 //            Available
             if ([[[_ipprojectdic objectForKey:@"unit_status"] uppercaseString]isEqualToString:[@"Available" uppercaseString]]||[[[_ipprojectdic objectForKey:@"blocked_user_name"]uppercaseString]isEqualToString:[[prefs objectForKey:@"user_name"]uppercaseString]]) {
@@ -2440,7 +2466,13 @@ else if ([[userDict objectForKey:@"status"] isEqualToString:@"Rejected"])
                 NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
                 [params setObject:@"get_flat_details"  forKey:@"requestType"];
                 [params setObject:siteidstr  forKey:@"buildingId"];
-                [params setObject:_radiobtntxt  forKey:@"unitCode"];
+                
+                NSString *substring = [_radiobtntxt substringToIndex:[_radiobtntxt length]-1];
+                //remove comment
+               // [params setObject:_radiobtntxt  forKey:@"unitCode"];
+                
+                [params setObject:substring  forKey:@"unitCode"];
+
                 [params setObject:[_dict objectForKey:@"project_id"] forKey:@"projectId"];
                 [params setObject:[prefs objectForKey:@"user_id"]  forKey:@"user_id"];
 
@@ -2452,17 +2484,17 @@ else if ([[userDict objectForKey:@"status"] isEqualToString:@"Rejected"])
                     
                     NSLog(@"JSON: %@", userDict);
                     NSMutableDictionary* dic =[userDict objectForKey:@"Android"];
-                    _flatdetailsdict=[[NSMutableDictionary alloc]init];
-                    _flatdetailsdict=[dic objectForKey:@"flat_details"];
-                    unitlbl2.text=[_flatdetailsdict objectForKey:@"unit_no"];
-                    flatyplbl2.text=[_flatdetailsdict objectForKey:@"flat_type"];
-                    carlbl2.text=[_flatdetailsdict objectForKey:@"carpet_area"];
-                    redcarpetlbl2.text=[_flatdetailsdict objectForKey:@"rera_ca"];
-                    totalarwlbl2.text=[_flatdetailsdict objectForKey:@"rera_total"];
-                    totalagrlbl2.text=[_flatdetailsdict objectForKey:@"agreement_value"];
-                    revisedagrttxt.text=[_flatdetailsdict objectForKey:@"agreement_value"];
-                    _avaragevaluastr=[_flatdetailsdict objectForKey:@"agreement_value"];
-                    bankamountxt.text=[_flatdetailsdict objectForKey:@"booking_amount"];
+                    self->_flatdetailsdict=[[NSMutableDictionary alloc]init];
+                    self->_flatdetailsdict=[dic objectForKey:@"flat_details"];
+                    self->unitlbl2.text=[self->_flatdetailsdict objectForKey:@"unit_no"];
+                    self->flatyplbl2.text=[self->_flatdetailsdict objectForKey:@"flat_type"];
+                    self->carlbl2.text=[self->_flatdetailsdict objectForKey:@"carpet_area"];
+                    self->redcarpetlbl2.text=[self->_flatdetailsdict objectForKey:@"rera_ca"];
+                    self->totalarwlbl2.text=[self->_flatdetailsdict objectForKey:@"rera_total"];
+                    self->totalagrlbl2.text=[self->_flatdetailsdict objectForKey:@"agreement_value"];
+                    self->revisedagrttxt.text=[self->_flatdetailsdict objectForKey:@"agreement_value"];
+                    self->_avaragevaluastr=[self->_flatdetailsdict objectForKey:@"agreement_value"];
+                    self->bankamountxt.text=[self->_flatdetailsdict objectForKey:@"booking_amount"];
            //         assignlbl.text=[NSString stringWithFormat:@"In fav. of:%@",[[_flatdetailsdict objectForKey:@"in_fav"]lowercaseString]];
 
                     step1btn.selected=NO;

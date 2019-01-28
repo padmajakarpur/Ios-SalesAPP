@@ -2195,7 +2195,18 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
         }
     } else
     {
-        _radiobtntxt=[NSString stringWithFormat:@"%@",radioButton.selectedButton.titleLabel.text];
+        //check whether button tittle appends "p" then remove it
+        NSString * buttonTitle = [NSString stringWithFormat:@"%@",radioButton.selectedButton.titleLabel.text];
+        if([[buttonTitle substringFromIndex:[buttonTitle length]-1] isEqualToString:@"p"]){
+            //Remove p
+            NSString *StringAfterRemovep = [buttonTitle substringToIndex:[buttonTitle length] - 1];
+            _radiobtntxt = StringAfterRemovep;
+            
+        }else{
+            _radiobtntxt = buttonTitle;
+        }
+    
+//        _radiobtntxt=[NSString stringWithFormat:@"%@",radioButton.selectedButton.titleLabel.text];
     }
 }
 -(void)block
@@ -2442,19 +2453,9 @@ else if ([[userDict objectForKey:@"status"] isEqualToString:@"Rejected"])
             _ipprojectdic=[[NSMutableDictionary alloc]init];
             for (int i=0; i<unitsarr.count; i++) {
                 _selectedstr=[[unitsarr objectAtIndex:i]objectForKey:@"id"];
-                //remove comment
-               // if ([_radiobtntxt isEqualToString:_selectedstr])
-                NSString * title = colorNames[i];
-                if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"3"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"1"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"5"]){
-                    title = [NSString stringWithFormat:@"%@p",colorNames[i]];                    NSString *substring = [_radiobtntxt substringToIndex:[_radiobtntxt length]-1];
-                  //_ipprojectdic=[unitsarr objectAtIndex:i];
-                if ([substring isEqualToString:_selectedstr])
-                //remove comment
-                   _ipprojectdic=[unitsarr objectAtIndex:i];
+                if ([_radiobtntxt isEqualToString:_selectedstr]){
+                    _ipprojectdic=[unitsarr objectAtIndex:i];
 
-                }else{
-                    if ([_radiobtntxt isEqualToString:_selectedstr])
-                        _ipprojectdic=[unitsarr objectAtIndex:i];
                 }
             }
             //NSString *truncatedString = [str substringToIndex:[str length]-1];
@@ -2466,13 +2467,8 @@ else if ([[userDict objectForKey:@"status"] isEqualToString:@"Rejected"])
                 NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
                 [params setObject:@"get_flat_details"  forKey:@"requestType"];
                 [params setObject:siteidstr  forKey:@"buildingId"];
+                [params setObject:_radiobtntxt  forKey:@"unitCode"];
                 
-                NSString *substring = [_radiobtntxt substringToIndex:[_radiobtntxt length]-1];
-                //remove comment
-               // [params setObject:_radiobtntxt  forKey:@"unitCode"];
-                
-                [params setObject:substring  forKey:@"unitCode"];
-
                 [params setObject:[_dict objectForKey:@"project_id"] forKey:@"projectId"];
                 [params setObject:[prefs objectForKey:@"user_id"]  forKey:@"user_id"];
 

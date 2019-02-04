@@ -1856,13 +1856,9 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
     for (int i=0;i<unitsarr.count; i++) {
         [colorNames addObject:[[unitsarr objectAtIndex:i]objectForKey:@"name"]];
         if ([[[unitsarr objectAtIndex:i]objectForKey:@"unit_status"] isEqualToString:@"Blocked"]) {
-           // [colors addObject:[UIColor blueColor]];
-//            NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:@"Your String here"];
-//            [attributeString addAttribute:NSStrikethroughStyleAttributeName
-//                                    value:@2
-//                                    range:NSMakeRange(0, [attributeString length])];
-
-            [colors addObject:[UIColor blackColor]];
+        
+           // [colors addObject:[UIColor blackColor]];
+            [colors addObject:[UIColor colorWithHexString:@"#cc0404"]];
 
         }
      else if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"0"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"1"]) {
@@ -1879,7 +1875,8 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
      }
         else
         {
-            [colors addObject:[UIColor blackColor]];
+           [colors addObject:[UIColor blackColor]];
+            
         }
     }
     
@@ -1917,12 +1914,16 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
             [attributeString addAttribute:NSStrikethroughStyleAttributeName
                                     value:@2
                                     range:NSMakeRange(0, [attributeString length])];
+            
+           [attributeString addAttribute:NSStrikethroughColorAttributeName value:[UIColor colorWithHexString:@"#cc0404"] range:NSMakeRange(0, [attributeString length])];
+            
+            [attributeString addAttribute:NSForegroundColorAttributeName
+                                     value:[UIColor colorWithHexString:@"#cc0404"]
+                                     range:NSMakeRange(0, [attributeString length])];
+
             radioButton = [self createRadioButtonWithFrameAttributedTitile:frame
                                                      Title:attributeString
-                                                     Color:color];
-            
-
-            
+                                                          Color:color];
         }else{
             NSString * title = colorNames[i];
             if ([[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"3"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"1"] || [[[unitsarr objectAtIndex:i]objectForKey:@"premium"] isEqualToString:@"5"]){
@@ -1995,6 +1996,55 @@ paymentgateybtn.frame=CGRectMake(screenRect.size.width*0.10,hig,screenRect.size.
       [okbtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
       okbtn.layer.borderColor = [UIColor grayColor].CGColor;
       okbtn.layer.borderWidth = 1.0;
+      
+      //***
+       high=high+70;
+      UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(05, high, 50, 20)];
+      myLabel.text = @"Red -";
+      //myLabel.backgroundColor = [UIColor yellowColor];
+      myLabel.textColor = [UIColor colorWithHexString:@"#cc0404"];
+      myLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+            [_demoView addSubview:myLabel];
+      
+      UILabel *myLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(45, high, 200, 20)];
+      myLabel1.text = @"Xrbia Inventory";
+     // myLabel1.backgroundColor = [UIColor yellowColor];
+      myLabel1.textColor = [UIColor blackColor];
+      myLabel1.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+      [_demoView addSubview:myLabel1];
+      
+     high=high+20;
+      UILabel *myLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(05, high, 50, 20)];
+      myLabel2.text = @"Blue -";
+     // myLabel2.backgroundColor = [UIColor yellowColor];
+      myLabel2.textColor = [UIColor colorWithHexString:@"#0000FF"];
+      myLabel2.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+      [_demoView addSubview:myLabel2];
+      
+      UILabel *myLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(45, high, 200, 20)];
+      myLabel3.text = @"Casalia Inventory";
+      //myLabel3.backgroundColor = [UIColor yellowColor];
+      myLabel3.textColor = [UIColor blackColor];
+      myLabel3.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+      [_demoView addSubview:myLabel3];
+      
+      high=high+20;
+      UILabel *myLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(05, high, 60, 20)];
+      myLabel4.text = @"Green -";
+      //myLabel4.backgroundColor = [UIColor yellowColor];
+      myLabel4.textColor = [UIColor colorWithHexString:@"#008000"];
+      myLabel4.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+      [_demoView addSubview:myLabel4];
+      
+      UILabel *myLabel5 = [[UILabel alloc] initWithFrame:CGRectMake(55, high, 200, 20)];
+      myLabel5.text = @"Issue Customer";
+     // myLabel5.backgroundColor = [UIColor redColor];
+      myLabel5.textColor = [UIColor blackColor];
+      myLabel5.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+      [_demoView addSubview:myLabel5];
+
+      
+      //***
       
       _demoView.frame=CGRectMake(0, 0, 300,high+50);
       [_demoView addSubview:okbtn];

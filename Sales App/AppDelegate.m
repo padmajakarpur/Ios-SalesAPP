@@ -63,7 +63,7 @@
         [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSDictionary *userDict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSLog(@"JSON: %@", userDict);
-       if([[userDict objectForKey:@"app_version"]isEqualToString:@"2.7"])//2.6
+       if([[userDict objectForKey:@"app_version"]isEqualToString:@"2.6"])//2.7
        {
            
          //  LoginViewController *viewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];

@@ -45,6 +45,7 @@
 		1142054A205263D00097305B /* FollowUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11420548205263D00097305B /* FollowUpViewController.xib */; };
 		1142054E2052922E0097305B /* BACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1142054C2052922E0097305B /* BACViewController.m */; };
 		1142054F2052922E0097305B /* BACViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1142054D2052922E0097305B /* BACViewController.xib */; };
+		11423B5D220CA97F009A0B89 /* Mobile Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 11423B5C220CA97F009A0B89 /* Mobile Image.png */; };
 		1144103721DBDBE6007C5B49 /* TodaysFollowupsBACCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144103521DBDBE6007C5B49 /* TodaysFollowupsBACCCell.m */; };
 		1144103821DBDBE6007C5B49 /* TodaysFollowupsBACCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1144103621DBDBE6007C5B49 /* TodaysFollowupsBACCCell.xib */; };
 		1144AB452179AB9000A06E1A /* BackOfficeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144AB432179AB9000A06E1A /* BackOfficeViewController.m */; };
@@ -89,7 +90,6 @@
 		115385F32029827F0070BE0E /* master plan icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385AD202981CA0070BE0E /* master plan icon.png */; };
 		115385F42029827F0070BE0E /* media icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385C8202981CE0070BE0E /* media icon.png */; };
 		115385F52029827F0070BE0E /* Menu Buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385D3202981CF0070BE0E /* Menu Buttons.png */; };
-		115385F62029827F0070BE0E /* Mobile Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385C6202981CD0070BE0E /* Mobile Image.png */; };
 		115385F82029827F0070BE0E /* my account icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385C3202981CD0070BE0E /* my account icon.png */; };
 		115385F92029827F0070BE0E /* my bookings icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385B4202981CB0070BE0E /* my bookings icon.png */; };
 		115385FB2029827F0070BE0E /* my dashboard icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 115385A4202981CA0070BE0E /* my dashboard icon.png */; };
@@ -323,6 +323,7 @@
 		1142054B2052922E0097305B /* BACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BACViewController.h; sourceTree = "<group>"; };
 		1142054C2052922E0097305B /* BACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BACViewController.m; sourceTree = "<group>"; };
 		1142054D2052922E0097305B /* BACViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BACViewController.xib; sourceTree = "<group>"; };
+		11423B5C220CA97F009A0B89 /* Mobile Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mobile Image.png"; path = "../../../../Mobile Image.png"; sourceTree = "<group>"; };
 		1144103421DBDBE6007C5B49 /* TodaysFollowupsBACCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodaysFollowupsBACCCell.h; sourceTree = "<group>"; };
 		1144103521DBDBE6007C5B49 /* TodaysFollowupsBACCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodaysFollowupsBACCCell.m; sourceTree = "<group>"; };
 		1144103621DBDBE6007C5B49 /* TodaysFollowupsBACCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaysFollowupsBACCCell.xib; sourceTree = "<group>"; };
@@ -392,7 +393,6 @@
 		115385BB202981CC0070BE0E /* Notification  Close Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Notification  Close Icon.png"; sourceTree = "<group>"; };
 		115385C0202981CC0070BE0E /* Vangani Ele.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vangani Ele.png"; sourceTree = "<group>"; };
 		115385C3202981CD0070BE0E /* my account icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my account icon.png"; sourceTree = "<group>"; };
-		115385C6202981CD0070BE0E /* Mobile Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mobile Image.png"; sourceTree = "<group>"; };
 		115385C8202981CE0070BE0E /* media icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "media icon.png"; sourceTree = "<group>"; };
 		115385C9202981CE0070BE0E /* Notification Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Notification Icon.png"; sourceTree = "<group>"; };
 		115385CA202981CE0070BE0E /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
@@ -924,7 +924,7 @@
 				115385AD202981CA0070BE0E /* master plan icon.png */,
 				115385C8202981CE0070BE0E /* media icon.png */,
 				115385D3202981CF0070BE0E /* Menu Buttons.png */,
-				115385C6202981CD0070BE0E /* Mobile Image.png */,
+				11423B5C220CA97F009A0B89 /* Mobile Image.png */,
 				115385C3202981CD0070BE0E /* my account icon.png */,
 				115385B4202981CB0070BE0E /* my bookings icon.png */,
 				115385A4202981CA0070BE0E /* my dashboard icon.png */,
@@ -1342,7 +1342,6 @@
 				115385F52029827F0070BE0E /* Menu Buttons.png in Resources */,
 				1157DA95202C19C000656307 /* RegularSchemeViewController.xib in Resources */,
 				11126EF2206E51F9006D734D /* floor plan Icon.png in Resources */,
-				115385F62029827F0070BE0E /* Mobile Image.png in Resources */,
 				11471B692046CB7E00FB7822 /* twitter-logo-silhouette.png in Resources */,
 				11126EEB206E49AE006D734D /* MarketingDetailsViewController.xib in Resources */,
 				115385F82029827F0070BE0E /* my account icon.png in Resources */,
@@ -1368,6 +1367,7 @@
 				115386032029827F0070BE0E /* Offer Icon.png in Resources */,
 				11DE8B9A20CF9E2F005927F4 /* TodaysVistViewController.xib in Resources */,
 				115386042029827F0070BE0E /* PRICE LIST Icon.png in Resources */,
+				11423B5D220CA97F009A0B89 /* Mobile Image.png in Resources */,
 				1144103821DBDBE6007C5B49 /* TodaysFollowupsBACCCell.xib in Resources */,
 				11471B682046CB7E00FB7822 /* google-plus-logo.png in Resources */,
 				119EF4D72062868000F1428A /* FollowUpEditViewController.xib in Resources */,

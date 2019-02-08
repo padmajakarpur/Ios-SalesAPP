@@ -73,6 +73,7 @@
 		115225A321E3266700EA5A44 /* SalesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115225A121E3266700EA5A44 /* SalesVC.xib */; };
 		115225A721E334AB00EA5A44 /* SalesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 115225A521E334AB00EA5A44 /* SalesTableViewCell.m */; };
 		115225A821E334AB00EA5A44 /* SalesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115225A621E334AB00EA5A44 /* SalesTableViewCell.xib */; };
+		1152EBDF220DFBA0000D2974 /* Xrbia_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1152EBDE220DFBA0000D2974 /* Xrbia_logo_white.png */; };
 		1153856B20297EA90070BE0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1153856A20297EA90070BE0E /* AppDelegate.m */; };
 		1153856E20297EA90070BE0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1153856D20297EA90070BE0E /* ViewController.m */; };
 		1153857120297EA90070BE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1153856F20297EA90070BE0E /* Main.storyboard */; };
@@ -362,6 +363,7 @@
 		115225A421E334AB00EA5A44 /* SalesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTableViewCell.h; sourceTree = "<group>"; };
 		115225A521E334AB00EA5A44 /* SalesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTableViewCell.m; sourceTree = "<group>"; };
 		115225A621E334AB00EA5A44 /* SalesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalesTableViewCell.xib; sourceTree = "<group>"; };
+		1152EBDE220DFBA0000D2974 /* Xrbia_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Xrbia_logo_white.png; sourceTree = "<group>"; };
 		1153856620297EA90070BE0E /* Sales App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sales App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1153856920297EA90070BE0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1153856A20297EA90070BE0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -899,6 +901,7 @@
 		115385A02029818B0070BE0E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1152EBDE220DFBA0000D2974 /* Xrbia_logo_white.png */,
 				11F2BD9E21141FD0003E22D1 /* cheque .png */,
 				119C17BD20EF62DD00CB1B1C /* downArrow.png */,
 				11ED4B4120C944F00053F4A1 /* Chembur.jpg */,
@@ -1346,6 +1349,7 @@
 				11126EEB206E49AE006D734D /* MarketingDetailsViewController.xib in Resources */,
 				115385F82029827F0070BE0E /* my account icon.png in Resources */,
 				11A12162208B5D4A00E24EF0 /* PerformanceViewController.xib in Resources */,
+				1152EBDF220DFBA0000D2974 /* Xrbia_logo_white.png in Resources */,
 				11F5AB51205B8F9B0081FFE5 /* AddVisitViewController.xib in Resources */,
 				1184D7BC20AC272300262E6B /* SalesHeadHandOverViewController.xib in Resources */,
 				11A2CFF02053A4B900BC62F2 /* ROXViewController.xib in Resources */,

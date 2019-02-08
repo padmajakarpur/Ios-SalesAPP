@@ -62,9 +62,11 @@ static NSString *kMerchantChecksumValURL = @"https://pguat.paytm.com/paytmchecks
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
  //   [self.view addSubview:backgroundImageView];
 
-    UIImageView *mobileimageview=[[UIImageView alloc]initWithFrame:CGRectMake(screenRect.size.width*0.30, screenRect.size.height*0.04, screenRect.size.width*0.40,screenRect.size.height*0.28)];
-    mobileimageview.image=[UIImage imageNamed:@"Mobile Image.png.png"];
-    backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
+    UIImageView *mobileimageview=[[UIImageView alloc]initWithFrame:CGRectMake(screenRect.size.width*0.23, screenRect.size.height*0.24, screenRect.size.width*0.57,screenRect.size.height*0.07)];
+    mobileimageview.image=[UIImage imageNamed:@"Xrbia_logo_white.png"];
+    //mobileimageview.backgroundColor = UIColor.whiteColor;
+    [mobileimageview setContentMode:UIViewContentModeScaleAspectFit];
+    //backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
        [self.view addSubview:mobileimageview];
 
     UILabel *leftarrlbl = [[UILabel alloc] initWithFrame:CGRectMake(screenRect.size.width*0.05,screenRect.size.height*0.32,screenRect.size.width*0.90,screenRect.size.height*0.10)];

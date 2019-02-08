@@ -4,6 +4,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FollowupDesignVC : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblTodayFolloCnt;
+@property (weak, nonatomic) IBOutlet UILabel *lblMissedFolloCnt;
+@property (weak, nonatomic) IBOutlet UILabel *lblFutureFolloCnt;
 
 @end
 

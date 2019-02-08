@@ -2,6 +2,7 @@
 #import "FollowupDesignVC.h"
 #import "UIColor+Expanded.h"
 #import "SWRevealViewController.h"
+#import <AFNetworking.h>
 
 @interface FollowupDesignVC (){
     CGRect screenRect;
@@ -38,7 +39,19 @@
     [navigationbtn.titleLabel setFont:customFontdregs];
     [navigationbtn setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:navigationbtn];
+    
+    _lblTodayFolloCnt.layer.masksToBounds = YES;
+    _lblTodayFolloCnt.layer.cornerRadius = 15;
+    
+    _lblFutureFolloCnt.layer.masksToBounds = YES;
+    _lblFutureFolloCnt.layer.cornerRadius = 15;
+    
+    _lblMissedFolloCnt.layer.masksToBounds = YES;
+    _lblMissedFolloCnt.layer.cornerRadius = 15;
+    
+    [self getcount];
 }
+
 - (IBAction)btnTodaysFollowupClicked:(id)sender {
     FollowUpViewController *mainvc=[[FollowUpViewController alloc] initWithNibName:@"FollowUpViewController" bundle:nil];
      mainvc.comestr=@"followup";
@@ -58,5 +71,100 @@
     [self.navigationController pushViewController:mainvc animated:YES];
 }
 
+-(void)getcount
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
+    [params setObject:[prefs objectForKey:@"user_id"]  forKey:@"userid"];
+
+    [params setObject:[prefs objectForKey:@"url"] forKey:@"url"];
+    NSString*   urlString = [[NSString alloc]initWithFormat:@"%@getCounts.php?",[prefs objectForKey:@"Link"]];
+
+    //[indicator startAnimating];
+    [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSDictionary *userDict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+
+        NSLog(@"JSON: %@", userDict);
+        NSMutableDictionary* dic =[userDict objectForKey:@"counts"];
+        NSMutableDictionary *mutableDict = [dic mutableCopy];
+        for (NSString *key in [dic allKeys]) {
+            if ([dic[key] isEqual:[NSNull null]]) {
+                mutableDict[key] = @"0";
+            }
+        }
+
+        dic = [mutableDict copy];
+        if (![[dic objectForKey:@"ffollowup"]isEqualToString:@"0"] &&[dic objectForKey:@"ffollowup"]!=nil) {
+            _lblFutureFolloCnt.text=[dic objectForKey:@"ffollowup"];
+            _lblFutureFolloCnt.hidden=NO;
+//           if (abs([[dic objectForKey:@"bookings"] intValue])> 99) {
+//
+//               CGSize stringsize = [[dic objectForKey:@"bookings"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+//
+//                bookingcountlbl.frame =CGRectMake(screenRect.size.width*0.54,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+        
+        }else{
+            _lblFutureFolloCnt.hidden=YES;
+       }
+
+        if (![[dic objectForKey:@"mfollowup"]isEqualToString:@"0"] &&[dic objectForKey:@"mfollowup"]!=nil) {
+            _lblMissedFolloCnt.text=[dic objectForKey:@"mfollowup"];
+            _lblMissedFolloCnt.hidden=NO;
+//            if (abs([[dic objectForKey:@"visits"] intValue])> 99) {
+//
+//                CGSize stringsize = [[dic objectForKey:@"visits"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+//
+//                visitscountlbl.frame =CGRectMake(screenRect.size.width*0.24,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+        
+        }else{
+                        _lblMissedFolloCnt.hidden=YES;
+        }
+        
+       if (![[dic objectForKey:@"tfollowup"]isEqualToString:@"0"] &&[dic objectForKey:@"tfollowup"]!=nil) {
+            _lblTodayFolloCnt.text=[dic objectForKey:@"tfollowup"];
+           self->_lblTodayFolloCnt.hidden=NO;
+
+//            if (abs([[dic objectForKey:@"followups"] intValue])> 99) {
+//                CGSize stringsize = [[dic objectForKey:@"followups"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+            
+//                followupslbl.frame =CGRectMake(screenRect.size.width*0.87,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+       
+       }else{
+           self->_lblTodayFolloCnt.hidden=YES;
+       }
+        
+       // }
+       // hight=hight+screenRect.size.height*0.17;
+        
+//        if (![[dic objectForKey:@"bac"]isEqualToString:@"0"] &&[dic objectForKey:@"bac"]!=nil) {
+//            baccountlbl.text=[dic objectForKey:@"bac"];
+//            baccountlbl.hidden=NO;
+//            if (abs([[dic objectForKey:@"bac"] intValue])> 99) {
+//                CGSize stringsize = [[dic objectForKey:@"bac"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+//
+//                baccountlbl.frame =CGRectMake(screenRect.size.width*0.24,hight,screenRect.size.width*0.08,screenRect.size.width*0.08);
+//            }
+//        }
+//
+//        if (![[dic objectForKey:@"rox"]isEqualToString:@"0"] &&[dic objectForKey:@"rox"]!=nil) {
+//            roxcountlbl.text=[dic objectForKey:@"rox"];
+//            roxcountlbl.hidden=NO;
+//            if (abs([[dic objectForKey:@"rox"] intValue])> 99) {
+//                CGSize stringsize = [[dic objectForKey:@"rox"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+//
+//                roxcountlbl.frame=CGRectMake(screenRect.size.width*0.55,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+//            }
+//        }
+//        hight=hight+screenRect.size.height*0.17;
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+       // [indicator stopAnimating];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:@"Failed to submit request"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+}
 
 @end

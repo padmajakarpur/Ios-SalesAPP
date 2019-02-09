@@ -1,10 +1,4 @@
-//
-//  EscelatedESC-RETViewController.h
-//  Sales App
-//
-//  Created by Infinitum on 11/06/18.
-//  Copyright © 2018 Infinitumus.com. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 #import "CustomIOS7AlertView.h"

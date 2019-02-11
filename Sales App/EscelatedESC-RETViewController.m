@@ -52,6 +52,25 @@ UIButton *backButton;
 
    [self addBackButtonWithImageName:@"backwhite"];
    [navigationView addSubview:backButton];
+    
+    //Count Circle Design
+    _lblChequeBounce.layer.masksToBounds = YES;
+    _lblChequeBounce.layer.cornerRadius = 15;
+    
+    _lblBAC.layer.masksToBounds = YES;
+    _lblBAC.layer.cornerRadius = 15;
+    
+    _lblOCR.layer.masksToBounds = YES;
+    _lblOCR.layer.cornerRadius = 15;
+    
+    _lblSDC.layer.masksToBounds = YES;
+    _lblSDC.layer.cornerRadius = 15;
+    
+    _lblEscalated.layer.masksToBounds = YES;
+    _lblEscalated.layer.cornerRadius = 15;
+    
+    [self getcount];
+
 }
 - (void)addBackButtonWithImageName:(NSString *)imageName {
     // init your custom button, or your custom view
@@ -1134,6 +1153,129 @@ UIButton *backButton;
     [[self navigationController] pushViewController:Objvc animated:YES];
 }
 - (IBAction)btnEscalatedClicked:(id)sender {
+}
+
+-(void)getcount
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
+    [params setObject:[prefs objectForKey:@"user_id"]  forKey:@"userid"];
+    
+    [params setObject:[prefs objectForKey:@"url"] forKey:@"url"];
+    NSString*   urlString = [[NSString alloc]initWithFormat:@"%@getCounts.php?",[prefs objectForKey:@"Link"]];
+    
+    //[indicator startAnimating];
+    [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSDictionary *userDict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        
+        NSLog(@"JSON: %@", userDict);
+        NSMutableDictionary* dic =[userDict objectForKey:@"counts"];
+        NSMutableDictionary *mutableDict = [dic mutableCopy];
+        for (NSString *key in [dic allKeys]) {
+            if ([dic[key] isEqual:[NSNull null]]) {
+                mutableDict[key] = @"0";
+            }
+        }
+        
+        dic = [mutableDict copy];
+        if (![[dic objectForKey:@"tcbounce"]isEqualToString:@"0"] &&[dic objectForKey:@"tcbounce"]!=nil) {
+            _lblChequeBounce.text=[dic objectForKey:@"tcbounce"];
+            _lblChequeBounce.hidden=NO;
+            //           if (abs([[dic objectForKey:@"bookings"] intValue])> 99) {
+            //
+            //               CGSize stringsize = [[dic objectForKey:@"bookings"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+            //
+            //                bookingcountlbl.frame =CGRectMake(screenRect.size.width*0.54,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+            
+        }else{
+            _lblChequeBounce.hidden=YES;
+        }
+        
+        if (![[dic objectForKey:@"tbac"]isEqualToString:@"0"] &&[dic objectForKey:@"tbac"]!=nil) {
+            _lblBAC.text=[dic objectForKey:@"tbac"];
+            _lblBAC.hidden=NO;
+            //            if (abs([[dic objectForKey:@"visits"] intValue])> 99) {
+            //
+            //                CGSize stringsize = [[dic objectForKey:@"visits"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+            //
+            //                visitscountlbl.frame =CGRectMake(screenRect.size.width*0.24,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+            
+        }else{
+            _lblBAC.hidden=YES;
+        }
+        
+        if (![[dic objectForKey:@"tocr"]isEqualToString:@"0"] &&[dic objectForKey:@"tocr"]!=nil) {
+            _lblOCR.text=[dic objectForKey:@"tocr"];
+            self->_lblOCR.hidden=NO;
+            
+            //            if (abs([[dic objectForKey:@"followups"] intValue])> 99) {
+            //                CGSize stringsize = [[dic objectForKey:@"followups"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+            
+            //                followupslbl.frame =CGRectMake(screenRect.size.width*0.87,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+            
+        }else{
+            self->_lblOCR.hidden=YES;
+        }
+        
+        if (![[dic objectForKey:@"tsdc"]isEqualToString:@"0"] &&[dic objectForKey:@"tsdc"]!=nil) {
+            _lblSDC.text=[dic objectForKey:@"tsdc"];
+            self->_lblSDC.hidden=NO;
+            
+            //            if (abs([[dic objectForKey:@"followups"] intValue])> 99) {
+            //                CGSize stringsize = [[dic objectForKey:@"followups"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+            
+            //                followupslbl.frame =CGRectMake(screenRect.size.width*0.87,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+            
+        }else{
+            self->_lblSDC.hidden=YES;
+        }
+        
+        if (![[dic objectForKey:@"tesc"]isEqualToString:@"0"] &&[dic objectForKey:@"tesc"]!=nil) {
+            _lblEscalated.text=[dic objectForKey:@"tesc"];
+            self->_lblEscalated.hidden=NO;
+            
+            //            if (abs([[dic objectForKey:@"followups"] intValue])> 99) {
+            //                CGSize stringsize = [[dic objectForKey:@"followups"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+            
+            //                followupslbl.frame =CGRectMake(screenRect.size.width*0.87,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+            
+        }else{
+            self->_lblEscalated.hidden=YES;
+        }
+
+        
+        // }
+        // hight=hight+screenRect.size.height*0.17;
+        
+        //        if (![[dic objectForKey:@"bac"]isEqualToString:@"0"] &&[dic objectForKey:@"bac"]!=nil) {
+        //            baccountlbl.text=[dic objectForKey:@"bac"];
+        //            baccountlbl.hidden=NO;
+        //            if (abs([[dic objectForKey:@"bac"] intValue])> 99) {
+        //                CGSize stringsize = [[dic objectForKey:@"bac"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+        //
+        //                baccountlbl.frame =CGRectMake(screenRect.size.width*0.24,hight,screenRect.size.width*0.08,screenRect.size.width*0.08);
+        //            }
+        //        }
+        //
+        //        if (![[dic objectForKey:@"rox"]isEqualToString:@"0"] &&[dic objectForKey:@"rox"]!=nil) {
+        //            roxcountlbl.text=[dic objectForKey:@"rox"];
+        //            roxcountlbl.hidden=NO;
+        //            if (abs([[dic objectForKey:@"rox"] intValue])> 99) {
+        //                CGSize stringsize = [[dic objectForKey:@"rox"] sizeWithFont:[UIFont systemFontOfSize:screenRect.size.width*0.035]];
+        //
+        //                roxcountlbl.frame=CGRectMake(screenRect.size.width*0.55,hight,stringsize.width+ screenRect.size.width*0.03,screenRect.size.width*0.08);
+        //            }
+        //        }
+        //        hight=hight+screenRect.size.height*0.17;
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        // [indicator stopAnimating];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:@"Failed to submit request"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
 }
 
 @end

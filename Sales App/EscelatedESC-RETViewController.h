@@ -23,4 +23,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn1Dashboard;
 @property (weak, nonatomic) IBOutlet UIButton *btn4Dashboard;
 @property (retain, nonatomic) IBOutlet UISegmentedControl * segmentedControl;
+@property (weak, nonatomic) IBOutlet UILabel *lblChequeBounce;
+@property (weak, nonatomic) IBOutlet UILabel *lblBAC;
+@property (weak, nonatomic) IBOutlet UILabel *lblOCR;
+@property (weak, nonatomic) IBOutlet UILabel *lblSDC;
+@property (weak, nonatomic) IBOutlet UILabel *lblEscalated;
 @end

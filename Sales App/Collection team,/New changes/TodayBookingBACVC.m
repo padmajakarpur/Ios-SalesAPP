@@ -139,7 +139,8 @@ NSString * CallStr;
     }
     
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
-     [params setObject:userId forKey:@"user_id"];
+    // [params setObject:userId forKey:@"user_id"];
+    [params setObject:@"74563cbf-d690-f45f-8916-599acc92ae49" forKey:@"user_id"];
      [params setObject:@"getBookings" forKey:@"requestType"];
     
     if (isFollowupClicked == true){

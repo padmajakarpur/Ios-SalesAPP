@@ -11,6 +11,7 @@
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "HomeViewController.h"
+#import "DocumentVC.h"
 
 
 @interface EscelatedESC_RETViewController ()
@@ -1153,6 +1154,10 @@ UIButton *backButton;
     [[self navigationController] pushViewController:Objvc animated:YES];
 }
 - (IBAction)btnEscalatedClicked:(id)sender {
+}
+- (IBAction)btnDocumentCollectionClicked:(id)sender {
+    DocumentVC *Objvc = [[DocumentVC alloc] initWithNibName:@"DocumentVC" bundle:nil];
+    [[self navigationController] pushViewController:Objvc animated:YES];
 }
 
 -(void)getcount

@@ -59,6 +59,8 @@
 		1144AB502179BBF000A06E1A /* BackOfficeinfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1144AB4E2179BBF000A06E1A /* BackOfficeinfoViewController.xib */; };
 		114607E721E8717E00260961 /* BookingFormIncompleteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 114607E521E8717E00260961 /* BookingFormIncompleteVC.m */; };
 		114607E821E8717E00260961 /* BookingFormIncompleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114607E621E8717E00260961 /* BookingFormIncompleteVC.xib */; };
+		1146D4342227CAE500EB7A0B /* DocImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1146D4322227CAE500EB7A0B /* DocImageVC.m */; };
+		1146D4352227CAE500EB7A0B /* DocImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1146D4332227CAE500EB7A0B /* DocImageVC.xib */; };
 		11471B622046C84600FB7822 /* facebook-app-symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 11471B612046C84600FB7822 /* facebook-app-symbol.png */; };
 		11471B672046CB7E00FB7822 /* linkedin-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 11471B632046CB7D00FB7822 /* linkedin-logo.png */; };
 		11471B682046CB7E00FB7822 /* google-plus-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 11471B642046CB7D00FB7822 /* google-plus-logo.png */; };
@@ -348,6 +350,9 @@
 		114607E421E8717E00260961 /* BookingFormIncompleteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookingFormIncompleteVC.h; sourceTree = "<group>"; };
 		114607E521E8717E00260961 /* BookingFormIncompleteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookingFormIncompleteVC.m; sourceTree = "<group>"; };
 		114607E621E8717E00260961 /* BookingFormIncompleteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingFormIncompleteVC.xib; sourceTree = "<group>"; };
+		1146D4312227CAE500EB7A0B /* DocImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocImageVC.h; sourceTree = "<group>"; };
+		1146D4322227CAE500EB7A0B /* DocImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocImageVC.m; sourceTree = "<group>"; };
+		1146D4332227CAE500EB7A0B /* DocImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocImageVC.xib; sourceTree = "<group>"; };
 		11471B612046C84600FB7822 /* facebook-app-symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-app-symbol.png"; sourceTree = "<group>"; };
 		11471B632046CB7D00FB7822 /* linkedin-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedin-logo.png"; sourceTree = "<group>"; };
 		11471B642046CB7D00FB7822 /* google-plus-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-plus-logo.png"; sourceTree = "<group>"; };
@@ -657,6 +662,9 @@
 				113FBCBC222667DC00CDD17E /* DocumentVC.h */,
 				113FBCBD222667DC00CDD17E /* DocumentVC.m */,
 				113FBCBE222667DC00CDD17E /* DocumentVC.xib */,
+				1146D4312227CAE500EB7A0B /* DocImageVC.h */,
+				1146D4322227CAE500EB7A0B /* DocImageVC.m */,
+				1146D4332227CAE500EB7A0B /* DocImageVC.xib */,
 			);
 			path = "Document Collection VC";
 			sourceTree = "<group>";
@@ -1407,6 +1415,7 @@
 				115386052029827F0070BE0E /* price list_1_Icon.png in Resources */,
 				11321E75202ACF3900DBA73F /* MyRefrencesViewController.xib in Resources */,
 				119B66772091E3D90031FC3D /* 76x76.jpg in Resources */,
+				1146D4352227CAE500EB7A0B /* DocImageVC.xib in Resources */,
 				113FBCC0222667DC00CDD17E /* DocumentVC.xib in Resources */,
 				119B66742091E3D90031FC3D /* 80x80.jpg in Resources */,
 				119B66782091E3D90031FC3D /* 40x40.jpg in Resources */,
@@ -1608,6 +1617,7 @@
 				11A506762031BCD9005533BC /* BookingInformationViewController.m in Sources */,
 				11816CC82063E439005B2B07 /* EditVisitViewController.m in Sources */,
 				11D4002120E11494001F1E68 /* DocumentsViewController.m in Sources */,
+				1146D4342227CAE500EB7A0B /* DocImageVC.m in Sources */,
 				11BB1B75203E8E8900B5B6EB /* AddbookingViewController.m in Sources */,
 				1144AB4A2179B5D400A06E1A /* BackOffCustomerListViewController.m in Sources */,
 				1157DAAC202C5BE500656307 /* MyLeadsViewController.m in Sources */,

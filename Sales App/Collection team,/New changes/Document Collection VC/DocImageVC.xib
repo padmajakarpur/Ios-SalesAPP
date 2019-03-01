@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocImageVC">
+            <connections>
+                <outlet property="imgViewAppPan" destination="wfP-yf-8hu" id="v9z-Wu-oZG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NEWSLETTER icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-yf-8hu">
+                    <rect key="frame" x="152.5" y="70" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="8XN-zH-lNj"/>
+                        <constraint firstAttribute="height" constant="70" id="CiA-ce-VOT"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-x3-yXh">
+                    <rect key="frame" x="193" y="142" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="d1n-aE-4R5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnAplPanUploadClicked:" destination="-1" eventType="touchUpInside" id="W1e-CC-fXL"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NEWSLETTER icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="fN6-Pq-oRt">
+                    <rect key="frame" x="152.5" y="182" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="3Sm-pA-Phd"/>
+                        <constraint firstAttribute="width" constant="70" id="l5f-rx-W1X"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yu-EW-ftj">
+                    <rect key="frame" x="193" y="254" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="nMv-jv-kKw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btncoapplAdharUploadClicked:" destination="-1" eventType="touchUpInside" id="idd-Y6-Mdz"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NEWSLETTER icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="4nM-SA-mMM">
+                    <rect key="frame" x="152.5" y="294" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="XTw-Qd-A9a"/>
+                        <constraint firstAttribute="height" constant="70" id="Y5z-E1-zyo"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NEWSLETTER icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="oRt-Zg-NgH">
+                    <rect key="frame" x="152.5" y="406" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="BDk-4b-bsy"/>
+                        <constraint firstAttribute="height" constant="70" id="JzY-Ra-8HA"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRs-z5-RCk">
+                    <rect key="frame" x="193" y="478" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="geu-fa-PZe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btncoaplAdharUploadClicked:" destination="-1" eventType="touchUpInside" id="HCp-mg-Xn4"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ9-45-ujh">
+                    <rect key="frame" x="187" y="142" width="1" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="BC7-7c-EiU"/>
+                        <constraint firstAttribute="width" constant="1" id="Ehu-OI-5mZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIU-Pz-E1k">
+                    <rect key="frame" x="50" y="142" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="TP7-sT-V2S"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Appl. Pancard">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnApppanClicked:" destination="-1" eventType="touchUpInside" id="6qk-Fp-KH9"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZU-Qk-5m5">
+                    <rect key="frame" x="187" y="254" width="1" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="4F6-LG-u8j"/>
+                        <constraint firstAttribute="height" constant="30" id="GVm-Nj-d4e"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M4-B0-EvO">
+                    <rect key="frame" x="50" y="254" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="JYb-Bz-YsD"/>
+                        <constraint firstAttribute="height" constant="30" id="eAE-QF-efm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Appl. Adhar Card">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnAppAdharClicked:" destination="-1" eventType="touchUpInside" id="ZpE-3f-18V"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT8-kD-SnO">
+                    <rect key="frame" x="50" y="366" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dqZ-8N-xrq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Co-Appl. Pancard">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnCoappPanClicked:" destination="-1" eventType="touchUpInside" id="jV4-1T-K0Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4M-32-Ex1">
+                    <rect key="frame" x="193" y="366" width="132" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XHo-NE-BaY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btncoaplPanUploadClicked:" destination="-1" eventType="touchUpInside" id="FAS-CZ-SF2"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-4y-6DH">
+                    <rect key="frame" x="187" y="366" width="1" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="PuM-mU-Whg"/>
+                        <constraint firstAttribute="height" constant="30" id="e1p-kY-nUr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXg-gl-MjW">
+                    <rect key="frame" x="187" y="478" width="1" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Vt0-hU-ii6"/>
+                        <constraint firstAttribute="width" constant="1" id="bWA-kK-qZ3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIG-OK-YbT">
+                    <rect key="frame" x="50" y="478" width="135" height="30"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0I9-PR-YWf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                    <state key="normal" title="Co-Appl. Adharcard">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnCoAppAdharClicked:" destination="-1" eventType="touchUpInside" id="ZED-lc-zg3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fN6-Pq-oRt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1xT-Z1-Ely"/>
+                <constraint firstItem="wfP-yf-8hu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4zw-fM-UIY"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="K4M-32-Ex1" secondAttribute="trailing" constant="50" id="5ka-Bi-khi"/>
+                <constraint firstItem="wZU-Qk-5m5" firstAttribute="leading" secondItem="7M4-B0-EvO" secondAttribute="trailing" constant="5" id="6z9-Q2-ije"/>
+                <constraint firstItem="5Yu-EW-ftj" firstAttribute="leading" secondItem="wZU-Qk-5m5" secondAttribute="trailing" constant="5" id="AM7-Cx-CIT"/>
+                <constraint firstItem="7M4-B0-EvO" firstAttribute="top" secondItem="fN6-Pq-oRt" secondAttribute="bottom" constant="2" id="Dt0-jJ-yXf"/>
+                <constraint firstItem="wZU-Qk-5m5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FDG-wr-suT"/>
+                <constraint firstItem="5Yu-EW-ftj" firstAttribute="top" secondItem="fN6-Pq-oRt" secondAttribute="bottom" constant="2" id="GoA-Ux-goo"/>
+                <constraint firstItem="fN6-Pq-oRt" firstAttribute="top" secondItem="6f9-x3-yXh" secondAttribute="bottom" constant="10" id="HAA-tx-mXc"/>
+                <constraint firstItem="wfP-yf-8hu" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="HMx-fk-s79"/>
+                <constraint firstItem="gJ9-45-ujh" firstAttribute="top" secondItem="wfP-yf-8hu" secondAttribute="bottom" constant="2" id="HUt-9W-tbE"/>
+                <constraint firstItem="6f9-x3-yXh" firstAttribute="leading" secondItem="gJ9-45-ujh" secondAttribute="trailing" constant="5" id="PnE-bc-kVv"/>
+                <constraint firstItem="eIG-OK-YbT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="PpL-K8-VKy"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="6f9-x3-yXh" secondAttribute="trailing" constant="50" id="QPp-NL-XMf"/>
+                <constraint firstItem="K4M-32-Ex1" firstAttribute="top" secondItem="4nM-SA-mMM" secondAttribute="bottom" constant="2" id="Sf9-JR-Qt5"/>
+                <constraint firstItem="gJ9-45-ujh" firstAttribute="leading" secondItem="NIU-Pz-E1k" secondAttribute="trailing" constant="5" id="Uyb-21-fSa"/>
+                <constraint firstItem="oRt-Zg-NgH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WC7-Oz-iAR"/>
+                <constraint firstItem="NIU-Pz-E1k" firstAttribute="top" secondItem="wfP-yf-8hu" secondAttribute="bottom" constant="2" id="WZ3-ed-WKn"/>
+                <constraint firstItem="AT8-kD-SnO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="YIe-ax-rbg"/>
+                <constraint firstItem="6f9-x3-yXh" firstAttribute="top" secondItem="wfP-yf-8hu" secondAttribute="bottom" constant="2" id="ab2-7r-hhf"/>
+                <constraint firstItem="oRt-Zg-NgH" firstAttribute="top" secondItem="AT8-kD-SnO" secondAttribute="bottom" constant="10" id="cKu-Te-S6L"/>
+                <constraint firstItem="wZU-Qk-5m5" firstAttribute="top" secondItem="fN6-Pq-oRt" secondAttribute="bottom" constant="2" id="caF-CC-QRm"/>
+                <constraint firstItem="eIG-OK-YbT" firstAttribute="top" secondItem="oRt-Zg-NgH" secondAttribute="bottom" constant="2" id="dAg-Ua-3Hp"/>
+                <constraint firstItem="7M4-B0-EvO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="fGj-y0-ARZ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="GRs-z5-RCk" secondAttribute="trailing" constant="50" id="gQ4-ia-Kta"/>
+                <constraint firstItem="AT8-kD-SnO" firstAttribute="top" secondItem="4nM-SA-mMM" secondAttribute="bottom" constant="2" id="j9d-6Y-jf1"/>
+                <constraint firstItem="GLF-4y-6DH" firstAttribute="leading" secondItem="AT8-kD-SnO" secondAttribute="trailing" constant="5" id="jhq-Z7-eKD"/>
+                <constraint firstItem="VXg-gl-MjW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oAi-JB-hVb"/>
+                <constraint firstItem="VXg-gl-MjW" firstAttribute="leading" secondItem="eIG-OK-YbT" secondAttribute="trailing" constant="2" id="oUN-QK-ntT"/>
+                <constraint firstItem="K4M-32-Ex1" firstAttribute="leading" secondItem="GLF-4y-6DH" secondAttribute="trailing" constant="5" id="qt7-6e-FQg"/>
+                <constraint firstItem="GRs-z5-RCk" firstAttribute="leading" secondItem="VXg-gl-MjW" secondAttribute="trailing" constant="5" id="rjW-uu-anF"/>
+                <constraint firstItem="NIU-Pz-E1k" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="rkb-Iv-lsj"/>
+                <constraint firstItem="GRs-z5-RCk" firstAttribute="top" secondItem="oRt-Zg-NgH" secondAttribute="bottom" constant="2" id="sPr-HD-AvA"/>
+                <constraint firstItem="4nM-SA-mMM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="taP-l7-m2H"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="5Yu-EW-ftj" secondAttribute="trailing" constant="50" id="u4k-X7-VQ1"/>
+                <constraint firstItem="4nM-SA-mMM" firstAttribute="top" secondItem="5Yu-EW-ftj" secondAttribute="bottom" constant="10" id="upY-uc-viw"/>
+                <constraint firstItem="GLF-4y-6DH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vWa-rg-qaM"/>
+                <constraint firstItem="GLF-4y-6DH" firstAttribute="top" secondItem="4nM-SA-mMM" secondAttribute="bottom" constant="2" id="x5W-Fz-JXK"/>
+                <constraint firstItem="gJ9-45-ujh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ywe-Pg-hmb"/>
+                <constraint firstItem="VXg-gl-MjW" firstAttribute="top" secondItem="oRt-Zg-NgH" secondAttribute="bottom" constant="2" id="zDj-SC-6fV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="154.27286356821591"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NEWSLETTER icon.png" width="129" height="129"/>
+    </resources>
+</document>

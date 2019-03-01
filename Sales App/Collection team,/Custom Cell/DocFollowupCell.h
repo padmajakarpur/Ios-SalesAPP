@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lblFollowupStatus;
 @property (weak, nonatomic) IBOutlet UILabel *lblUnitNo;
 @property (weak, nonatomic) IBOutlet UILabel *lblMobNo;
+@property (weak, nonatomic) IBOutlet UIButton *btnChangeStatus;
+@property (weak, nonatomic) IBOutlet UIButton *btnUploadDoc;
+@property (weak, nonatomic) IBOutlet UIButton *btnCallDoc;
 
 @end
 

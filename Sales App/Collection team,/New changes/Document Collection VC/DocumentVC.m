@@ -97,6 +97,7 @@
     [indicator startAnimating];
     [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSDictionary *userDict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        printf("%@", userDict);
         self->resultArray = [[NSMutableArray alloc]init];
         self->resultArray = userDict[@"Android"][@"bookings"];
         [self.myTableview reloadData];
@@ -153,6 +154,7 @@
 }
 -(void)UploadDocBtnClicked:(UIButton*)sender{
     DocImageVC *Objvc = [[DocImageVC alloc] initWithNibName:@"DocImageVC" bundle:nil];
+    Objvc.InfoDict = resultArray[sender.tag];
     
     [[self navigationController] pushViewController:Objvc animated:YES];
 }

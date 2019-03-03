@@ -16,6 +16,16 @@
     int Tag_AppPan;
     int Tag_CoPan;
     //bool isFollowupClicked;
+    //Image view outlet
+    
+    __weak IBOutlet UIImageView *imgViewCoAppPan;
+    __weak IBOutlet UIImageView *imgViewAppAdhar;
+    __weak IBOutlet UIImageView *imgViewCoAppAdhar;
+    
+    __weak IBOutlet UIView *container4;
+    __weak IBOutlet UIView *container3;
+    __weak IBOutlet UIView *container2;
+    __weak IBOutlet UIView *container1;
 }
 
 @end
@@ -24,6 +34,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Setup UI
+    container1.layer.cornerRadius = 7.0;
+    container1.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    container1.layer.borderWidth = 1.0;
+    
+    container2.layer.cornerRadius = 7.0;
+    container2.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    container2.layer.borderWidth = 1.0;
+    
+    container3.layer.cornerRadius = 7.0;
+    container3.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    container3.layer.borderWidth = 1.0;
+    
+    container4.layer.cornerRadius = 7.0;
+    container4.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    container4.layer.borderWidth = 1.0;
+    
     screenRect = [[UIScreen mainScreen] bounds];
     Tag_AppAdhar = 1;
     Tag_CoAdhar = 2;
@@ -101,15 +128,36 @@
 }
 //BtnUpload Image
 - (IBAction)btnAplPanUploadClicked:(id)sender {
+    if ([self selectImageValidation:_imgViewAppPan.image]) {
+        [self uploadImage:@"applicant_pancard" :_imgViewAppPan.image];
+    }
+    
 }
-
-- (IBAction)btncoapplAdharUploadClicked:(id)sender {
+- (IBAction)btnapplAdharUploadClicked:(id)sender {
+    if ([self selectImageValidation:imgViewAppAdhar.image]) {
+    [self uploadImage:@"applicant_adharcard" :imgViewAppAdhar.image];
+    }
 }
-
 - (IBAction)btncoaplPanUploadClicked:(id)sender {
+    if ([self selectImageValidation:imgViewCoAppPan.image]) {
+    [self uploadImage:@"coapplicant_pancard" :imgViewCoAppPan.image];
+    }
+}
+- (IBAction)btncoaplAdharUploadClicked:(id)sender {
+    if ([self selectImageValidation:imgViewCoAppAdhar.image]) {
+    [self uploadImage:@"coapplicant_adharcard" :imgViewCoAppAdhar.image];
+    }
 }
 
-- (IBAction)btncoaplAdharUploadClicked:(id)sender {
+-(BOOL)selectImageValidation: (UIImage *)selectedImage{
+    if ([UIImagePNGRepresentation(selectedImage) isEqualToData: UIImagePNGRepresentation([UIImage imageNamed:@"iconTakeImage.png"])]){
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:@"Please choose image to upload" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return false;
+        
+    }else{
+        return true;
+    }
 }
 
 -(void)TakeImage : (int)tag
@@ -145,40 +193,53 @@ popup.tag = tag;
     // output image
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     if (picker.view.tag == Tag_CoAdhar) {
-        self.imgViewAppPan.image = chosenImage;
+       imgViewCoAppAdhar.image = chosenImage;
     }if (picker.view.tag == Tag_CoPan) {
-        self.imgViewAppPan.image = chosenImage;
+        imgViewCoAppPan.image = chosenImage;
     }if (picker.view.tag == Tag_AppAdhar) {
-        self.imgViewAppPan.image = chosenImage;
+        imgViewAppAdhar.image = chosenImage;
     }if (picker.view.tag == Tag_AppPan) {
         self.imgViewAppPan.image = chosenImage;
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
--(void)uploadImage{
-//    NSData  *imageData;
-//    imageData =  UIImagePNGRepresentation(_imgViewAppPan);
-//   NSString * base64 = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-//   // extension=@"image/png";}
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-//    [manager POST:@"https://blahblahblah.com/uploadProfileImg?userId=1" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//        //NSData *pngData = [[NSData alloc] initWithBase64EncodedString:base64 options:1];
-//        [formData appendPartWithFileData:imageData
-//                                    name:@"img_string"
-//                                fileName:_imgViewAppPan]; //mimeType:extension];
-//
-//    }  success:^(NSURLSessionDataTask *task, id responseObject) {
-//        NSLog(@"Response: %@", responseObject);
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-//        NSLog(@"error: %@",error);
-//        // NSHTTPURLResponse *response = (NSHTTPURLResponse *)operation.response;
-//        NSLog(@"statusCode: %ld", (long)response.statusCode);
-//        NSString* ErrorResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-//        NSLog(@"Error Response:%@",ErrorResponse);
-//    }];
-}
+-(void)uploadImage:(NSString *)urlType :(UIImage *)selctedImage{
+    //Image to base 64
+    NSString*  base64String = @"";
+    NSData *   ImageDatas = UIImageJPEGRepresentation(selctedImage,0.0);
+    base64String  = [ImageDatas base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    
+    //network related
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
+    [params setObject:self.InfoDict[@"bknum"]  forKey:@"bknum"];
+    [params setObject:self.InfoDict[@"proj_name"]  forKey:@"project_name"];
+    [params setObject:self.InfoDict[@"name1"]  forKey:@"customer_name"];
+    [params setObject:urlType  forKey:@"request_type"];
+    //This need to be change
+    [params setObject:self.InfoDict[@"name1"]  forKey:@"created_by"];
+    [params setObject:base64String  forKey:@"img_string"];
+   
 
+    //  NSString* urlString =@"http://49.248.43.178/xrbia/mobilecrm/getdetails.php?";
+    NSString*   urlString = @"http://13.126.129.245/xrbia/mobilecrm/sales/doc_upload/upload_doc.php?";
+    [indicator startAnimating];
+    [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSMutableDictionary* dict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSLog(@"JSON: %@", dict);
+        
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:dict[@"msg"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            //[self.navigationController popViewControllerAnimated:YES];
+        
+        [indicator stopAnimating];
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        [indicator stopAnimating];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:@"Failed to submit request"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+}
 
 @end

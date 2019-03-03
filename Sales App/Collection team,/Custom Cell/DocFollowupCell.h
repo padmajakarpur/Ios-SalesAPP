@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btnChangeStatus;
 @property (weak, nonatomic) IBOutlet UIButton *btnUploadDoc;
 @property (weak, nonatomic) IBOutlet UIButton *btnCallDoc;
+@property (weak, nonatomic) IBOutlet UIView *myView;
 
 @end
 

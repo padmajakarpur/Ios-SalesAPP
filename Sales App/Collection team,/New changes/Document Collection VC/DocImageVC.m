@@ -210,6 +210,8 @@ popup.tag = tag;
     base64String  = [ImageDatas base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     
     //network related
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString * userId = [prefs objectForKey:@"user_id"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
@@ -218,7 +220,9 @@ popup.tag = tag;
     [params setObject:self.InfoDict[@"name1"]  forKey:@"customer_name"];
     [params setObject:urlType  forKey:@"request_type"];
     //This need to be change
-    [params setObject:self.InfoDict[@"name1"]  forKey:@"created_by"];
+    [params setObject:userId forKey:@"created_by"];
+
+   // [params setObject:self.InfoDict[@"name1"]  forKey:@"created_by"];
     [params setObject:base64String  forKey:@"img_string"];
    
 

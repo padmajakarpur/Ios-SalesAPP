@@ -11,8 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentVC">
             <connections>
-                <outlet property="btnDocFollowup" destination="kt8-zm-KV3" id="BP5-LA-glT"/>
-                <outlet property="btnDocHomeVisit" destination="Uod-Ho-cBN" id="CNX-db-IQT"/>
                 <outlet property="myTableview" destination="qvv-Sv-M7m" id="xch-sP-dJB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,63 +31,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt8-zm-KV3">
-                    <rect key="frame" x="47" y="70" width="130" height="45"/>
-                    <color key="backgroundColor" red="0.27552257171645528" green="0.44222560972195124" blue="0.11678756989754867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="eJN-KQ-3ay"/>
-                        <constraint firstAttribute="width" constant="130" id="pPK-UZ-r1d"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                    <state key="normal" title="Follow up">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="btnDocFollowupClicked:" destination="-1" eventType="touchUpInside" id="Mqm-15-K3K"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uod-Ho-cBN">
-                    <rect key="frame" x="198" y="70" width="130" height="45"/>
-                    <color key="backgroundColor" red="0.28992316114759392" green="0.46533917679512193" blue="0.12289164273004888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="130" id="LDg-bS-DwG"/>
-                        <constraint firstAttribute="height" constant="45" id="y0b-24-kKr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                    <state key="normal" title="Home Visit">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="btnDocHomeVisitClicked:" destination="-1" eventType="touchUpInside" id="Aah-I0-YBs"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qvv-Sv-M7m">
-                    <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Uod-Ho-cBN" firstAttribute="leading" secondItem="SlW-Du-Alh" secondAttribute="trailing" constant="10" id="5ax-Gb-Jqp"/>
-                <constraint firstItem="kt8-zm-KV3" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="6F3-H8-Ywm"/>
-                <constraint firstItem="SlW-Du-Alh" firstAttribute="leading" secondItem="kt8-zm-KV3" secondAttribute="trailing" constant="10" id="8cB-se-Kie"/>
                 <constraint firstItem="SlW-Du-Alh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8ou-U2-FqU"/>
-                <constraint firstItem="qvv-Sv-M7m" firstAttribute="top" secondItem="kt8-zm-KV3" secondAttribute="bottom" constant="1" id="F4r-7A-t1S"/>
                 <constraint firstItem="qvv-Sv-M7m" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Ics-Yv-Nz9"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="qvv-Sv-M7m" secondAttribute="bottom" id="Ma3-hB-od6"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="qvv-Sv-M7m" secondAttribute="trailing" id="OQA-cZ-kd8"/>
-                <constraint firstItem="Uod-Ho-cBN" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="aJp-q5-voR"/>
                 <constraint firstItem="SlW-Du-Alh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="pGQ-Kl-a5P"/>
+                <constraint firstItem="qvv-Sv-M7m" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="tvy-5u-yLE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="140" y="154.27286356821591"/>

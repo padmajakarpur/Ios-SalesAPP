@@ -18,6 +18,8 @@
     //bool isFollowupClicked;
     //Image view outlet
     
+
+    
     __weak IBOutlet UIImageView *imgViewCoAppPan;
     __weak IBOutlet UIImageView *imgViewAppAdhar;
     __weak IBOutlet UIImageView *imgViewCoAppAdhar;
@@ -26,6 +28,9 @@
     __weak IBOutlet UIView *container3;
     __weak IBOutlet UIView *container2;
     __weak IBOutlet UIView *container1;
+    
+    NSDictionary * userDict;
+    
 }
 
 @end
@@ -99,6 +104,7 @@
     [indicator bringSubviewToFront:self.view];
     indicator.layer.cornerRadius=15.0f;
     
+    
 
 }
 - (void)addBackButtonWithImageName:(NSString *)imageName {
@@ -116,6 +122,8 @@
 //Button take image
 - (IBAction)btnApppanClicked:(id)sender {
     [self TakeImage : Tag_AppPan];
+    
+    
 }
 - (IBAction)btnAppAdharClicked:(id)sender {
     [self TakeImage : Tag_AppAdhar];
@@ -128,9 +136,14 @@
 }
 //BtnUpload Image
 - (IBAction)btnAplPanUploadClicked:(id)sender {
+   
+    
     if ([self selectImageValidation:_imgViewAppPan.image]) {
         [self uploadImage:@"applicant_pancard" :_imgViewAppPan.image];
-    }
+        // [self loadUrlData];
+}
+   
+
     
 }
 - (IBAction)btnapplAdharUploadClicked:(id)sender {
@@ -149,13 +162,15 @@
     }
 }
 
+
 -(BOOL)selectImageValidation: (UIImage *)selectedImage{
-    if ([UIImagePNGRepresentation(selectedImage) isEqualToData: UIImagePNGRepresentation([UIImage imageNamed:@"iconTakeImage.png"])]){
+    //************REMOVE************
+   if ([UIImagePNGRepresentation(selectedImage) isEqualToData: UIImagePNGRepresentation([UIImage imageNamed:@"iconTakeImage.png"])]){
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:@"Please choose image to upload" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+       [alert show];
         return false;
-        
-    }else{
+
+  }else{
         return true;
     }
 }
@@ -218,6 +233,11 @@ popup.tag = tag;
     [params setObject:self.InfoDict[@"bknum"]  forKey:@"bknum"];
     [params setObject:self.InfoDict[@"proj_name"]  forKey:@"project_name"];
     [params setObject:self.InfoDict[@"name1"]  forKey:@"customer_name"];
+//    [params setObject:self.InfoDict[@"app_pan"]  forKey:@"app_pan"];
+//    [params setObject:self.InfoDict[@"app_aadh"]  forKey:@"app_aadh"];
+//    [params setObject:self.InfoDict[@"coapp_pan"]  forKey:@"coapp_pan"];
+//    [params setObject:self.InfoDict[@"coapp_aadh"]  forKey:@"coapp_aadh"];
+    
     [params setObject:urlType  forKey:@"request_type"];
     //This need to be change
     [params setObject:userId forKey:@"created_by"];
@@ -230,13 +250,51 @@ popup.tag = tag;
     NSString*   urlString = @"http://13.126.129.245/xrbia/mobilecrm/sales/doc_upload/upload_doc.php?";
     [indicator startAnimating];
     [manager POST:urlString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSMutableDictionary* dict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        //NSMutableDictionary* dict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+       NSMutableDictionary * dict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSLog(@"JSON: %@", dict);
+        
+        
+        if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
+            // nil branch
+            self->_lblApplPan.text = @"null";
+        } else {
+            // category name is set
+            self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
+            
+        }
+        
+        if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
+            // nil branch
+            self->_lblApplAdhar.text = @"null";
+        } else {
+            // category name is set
+            self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
+            
+        }
+        
+        if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
+            // nil branch
+            self->_lblCoAppPan.text = @"null";
+        } else {
+            // category name is set
+            self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
+            
+        }
+        
+        if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
+            // nil branch
+            self->_lblCoappAdhar.text = @"null";
+        } else {
+            // category name is set
+            self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
+            
+        }
+        
+        
         
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:dict[@"msg"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
-            //[self.navigationController popViewControllerAnimated:YES];
-        
         [indicator stopAnimating];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -245,5 +303,6 @@ popup.tag = tag;
         [alert show];
     }];
 }
+
 
 @end

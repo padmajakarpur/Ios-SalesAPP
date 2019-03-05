@@ -131,7 +131,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 213;
+    return 221;//213
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -143,9 +143,10 @@
         NSArray *tempObj = resultArray[indexPath.row];
         cell.lblProjName.text = [tempObj valueForKey:@"proj_name"];
         cell.lblCustName.text = [tempObj valueForKey:@"name1"];
-        cell.lblFollowupStatus.text = [tempObj valueForKey:@"fstatus"];
         cell.lblUnitNo.text = [tempObj valueForKey:@"unit_no"];
         cell.lblMobNo.text = [tempObj valueForKey:@"mobile"];
+    cell.lblBookingNo.text = [tempObj valueForKey:@"bknum"];
+    cell.lblBookingDate.text = [tempObj valueForKey:@"bkdate"];
     
     cell.btnUploadDoc.tag = indexPath.row;
     [cell.btnUploadDoc addTarget:self action:@selector(UploadDocBtnClicked:) forControlEvents: UIControlEventTouchUpInside];

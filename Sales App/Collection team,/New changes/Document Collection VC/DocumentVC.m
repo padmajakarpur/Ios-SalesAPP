@@ -27,7 +27,7 @@
     [_btnDocFollowup setBackgroundColor:[UIColor colorWithHexString:@"#004c00"]];
     [_btnDocHomeVisit setBackgroundColor:[UIColor grayColor]];
 //
-    [self loadDocFollowupData];
+    //[self loadDocFollowupData];
 //
 //    _btnFollowup.tag = 1;
 //    _btnHomeVisit.tag = 1;
@@ -110,9 +110,9 @@
         
     }];
 }
-//-(void)viewWillAppear:(BOOL)animated{
-//    [self loadDocFollowupData];
-//}
+-(void)viewWillAppear:(BOOL)animated{
+    [self loadDocFollowupData];
+}
 
 - (IBAction)btnDocFollowupClicked:(id)sender {
     isFollowupClicked = true;

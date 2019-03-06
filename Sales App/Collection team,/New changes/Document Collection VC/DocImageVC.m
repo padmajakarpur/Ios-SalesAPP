@@ -104,8 +104,128 @@
     [indicator bringSubviewToFront:self.view];
     indicator.layer.cornerRadius=15.0f;
     
+    if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblApplPan.text = @"null";
+    } else {
+        // category name is set
+        self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
+        
+    }
+    
+    if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblApplAdhar.text = @"null";
+    } else {
+        // category name is set
+        self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
+        
+    }
+
+    
+    
+    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblCoAppPan.text = @"null";
+    } else {
+        // category name is set
+        self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
+        
+    }
+    
+    if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblCoappAdhar.text = @"null";
+    } else {
+        // category name is set
+        self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
+        
+    }
+    
     
 
+}
+-(void)viewWillAppear:(BOOL)animated{
+    if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblApplPan.text = @"null";
+    } else {
+        // category name is set
+        self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
+        
+    }
+    
+    if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblApplAdhar.text = @"null";
+    } else {
+        // category name is set
+        self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
+        
+    }
+    
+    
+    
+    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblCoAppPan.text = @"null";
+    } else {
+        // category name is set
+        self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
+        
+    }
+    
+    if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblCoappAdhar.text = @"null";
+    } else {
+        // category name is set
+        self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
+        
+    }
+
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblApplPan.text = @"null";
+    } else {
+        // category name is set
+        self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
+        
+    }
+    
+    if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblApplAdhar.text = @"null";
+    } else {
+        // category name is set
+        self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
+        
+    }
+    
+    
+    
+    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblCoAppPan.text = @"null";
+    } else {
+        // category name is set
+        self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
+        
+    }
+    
+    if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
+        // nil branch
+        self->_lblCoappAdhar.text = @"null";
+    } else {
+        // category name is set
+        self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
+        
+    }
+
+    
 }
 - (void)addBackButtonWithImageName:(NSString *)imageName {
     // init your custom button, or your custom view
@@ -125,9 +245,12 @@
     
     
 }
-- (IBAction)btnAppAdharClicked:(id)sender {
-    [self TakeImage : Tag_AppAdhar];
+- (IBAction)btnAppAadharClicked:(id)sender {
+        [self TakeImage : Tag_AppAdhar];
 }
+//- (IBAction)btnAppAdharClicked:(id)sender {
+//    [self TakeImage : Tag_AppAdhar];
+//}
 - (IBAction)btnCoappPanClicked:(id)sender {
      [self TakeImage : Tag_CoPan];
 }
@@ -140,25 +263,59 @@
     
     if ([self selectImageValidation:_imgViewAppPan.image]) {
         [self uploadImage:@"applicant_pancard" :_imgViewAppPan.image];
-        // [self loadUrlData];
-}
-   
-
-    
-}
+        
+        if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
+                    // nil branch
+                    self->_lblApplPan.text = @"null";
+                } else {
+                    // category name is set
+                    self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
+        
+                }
+      }
+   }
 - (IBAction)btnapplAdharUploadClicked:(id)sender {
     if ([self selectImageValidation:imgViewAppAdhar.image]) {
     [self uploadImage:@"applicant_adharcard" :imgViewAppAdhar.image];
+        
+        if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
+            // nil branch
+            self->_lblApplAdhar.text = @"null";
+        } else {
+            // category name is set
+            self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
+            
+        }
+
+        
     }
 }
 - (IBAction)btncoaplPanUploadClicked:(id)sender {
     if ([self selectImageValidation:imgViewCoAppPan.image]) {
     [self uploadImage:@"coapplicant_pancard" :imgViewCoAppPan.image];
+        
+    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
+                    // nil branch
+        self->_lblCoAppPan.text = @"null";
+        } else {
+                    // category name is set
+            self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
+        
+    }
     }
 }
 - (IBAction)btncoaplAdharUploadClicked:(id)sender {
     if ([self selectImageValidation:imgViewCoAppAdhar.image]) {
     [self uploadImage:@"coapplicant_adharcard" :imgViewCoAppAdhar.image];
+        
+    if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
+                    // nil branch
+        self->_lblCoappAdhar.text = @"null";
+    } else {
+                    // category name is set
+        self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
+        
+        }
     }
 }
 
@@ -261,7 +418,7 @@ popup.tag = tag;
         } else {
             // category name is set
             self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
-            
+
         }
         
         if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
@@ -272,23 +429,25 @@ popup.tag = tag;
             self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
             
         }
-        
+
+
+
         if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
             // nil branch
             self->_lblCoAppPan.text = @"null";
         } else {
             // category name is set
             self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
-            
+
         }
-        
+
         if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
             // nil branch
             self->_lblCoappAdhar.text = @"null";
         } else {
             // category name is set
             self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
-            
+
         }
         
         

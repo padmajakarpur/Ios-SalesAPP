@@ -164,7 +164,7 @@
                                     <constraint firstAttribute="height" constant="45" id="NUK-9J-ZcJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                <state key="normal" title="Upload Document" image="upload">
+                                <state key="normal" title="Upload Doc" image="upload">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>

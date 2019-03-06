@@ -87,9 +87,9 @@
     NSString * userId = [prefs objectForKey:@"user_id"];
   NSString*   urlString = [[NSString alloc]initWithFormat:@"http://13.126.129.245/xrbia/mobilecrm/sales/getdoccollection.php"];
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
-    // [params setObject:userId forKey:@"user_id"];
+     [params setObject:userId forKey:@"user_id"];
     //************REMOVE HARDCODE********//
-     [params setObject:@"74563cbf-d690-f45f-8916-599acc92ae49" forKey:@"user_id"];
+    // [params setObject:@"74563cbf-d690-f45f-8916-599acc92ae49" forKey:@"user_id"];
     [params setObject:@"getBookings" forKey:@"requestType"];
    [params setObject:@"BS" forKey:@"mode"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

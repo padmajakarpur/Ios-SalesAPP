@@ -15,19 +15,24 @@
     int Tag_CoAdhar;
     int Tag_AppPan;
     int Tag_CoPan;
-    //bool isFollowupClicked;
-    //Image view outlet
+    int Tag_AppBankStat;
+    int Tag_CoAppBankStat;
     
 
     
     __weak IBOutlet UIImageView *imgViewCoAppPan;
     __weak IBOutlet UIImageView *imgViewAppAdhar;
     __weak IBOutlet UIImageView *imgViewCoAppAdhar;
+    __weak IBOutlet UIImageView *imgViewAppBankStat;
+    __weak IBOutlet UIImageView *imgViewCoappBankStat;
     
     __weak IBOutlet UIView *container4;
     __weak IBOutlet UIView *container3;
     __weak IBOutlet UIView *container2;
     __weak IBOutlet UIView *container1;
+    __weak IBOutlet UIView *container5;
+    __weak IBOutlet UIView *container6;
+   
     
     NSDictionary * userDict;
     
@@ -56,22 +61,23 @@
     container4.layer.borderColor = [UIColor darkGrayColor].CGColor;
     container4.layer.borderWidth = 1.0;
     
+    container5.layer.cornerRadius = 7.0;
+    container5.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    container5.layer.borderWidth = 1.0;
+    
+    container6.layer.cornerRadius = 7.0;
+    container6.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    container6.layer.borderWidth = 1.0;
+    
     screenRect = [[UIScreen mainScreen] bounds];
     Tag_AppAdhar = 1;
     Tag_CoAdhar = 2;
     Tag_AppPan = 3;
     Tag_CoPan = 4;
-    //    isFollowupClicked = true;
-    //    [_btnFollowup setBackgroundColor:[UIColor colorWithHexString:@"#004c00"]];
-    //    [_btnHomeVisit setBackgroundColor:[UIColor grayColor]];
-    //
-    //[self loadDocFollowupData];
-    //
-    //    _btnFollowup.tag = 1;
-    //    _btnHomeVisit.tag = 1;
-   // _myTableview.delegate  = self;
-    //_myTableview.dataSource = self;
-   // isFollowupClicked = true;
+    Tag_AppBankStat = 5;
+    Tag_CoAppBankStat = 6;
+    
+   
     UIView* navigationView=[[UIView alloc]initWithFrame:CGRectMake(0,0,screenRect.size.width,screenRect.size.height*0.10)];
     [self.view addSubview:navigationView];
     navigationView.backgroundColor = [UIColor colorWithHexString:@"#004c00"];
@@ -80,17 +86,7 @@
     //   horizontallbl.backgroundColor = [UIColor colorWithHexString:@"#004c00"];
     horizontallbl.font=[UIFont boldSystemFontOfSize:screenRect.size.width*0.055];
     horizontallbl.text = @"Upload Image";
-    //    if ([ocrStr isEqualToString:@"OCRStr"]){
-    //        horizontallbl.text = @"OCR";
-    //
-    //    }else if ([sdcStr isEqualToString:@"SDCStr"]){
-    //        horizontallbl.text = @"SDC";
-    //
-    //    }else{
-    //        horizontallbl.text = @"BAC";
-    //
-    //    }
-    [horizontallbl setTextColor:[UIColor whiteColor]];
+        [horizontallbl setTextColor:[UIColor whiteColor]];
     horizontallbl.textAlignment = NSTextAlignmentCenter;
     [navigationView addSubview:horizontallbl];
     [self addBackButtonWithImageName:@"backwhite"];
@@ -145,93 +141,40 @@
         imgViewCoAppAdhar.image = [self getImageFromUrl:self.InfoDict[@"coapp_aadh"]];
         
     }
-}
+    
+    if (self.InfoDict[@"app_bank"] == nil || [self.InfoDict[@"app_bank"]  isEqual: @""] || self.InfoDict[@"app_bank"] == (id)[NSNull null]) {
+        // nil branch
+        self.lblAppBankStat.text = @"";
+    } else {
+        // category name is set
+        self.lblAppBankStat.text = self.InfoDict[@"app_bank"];
+        imgViewAppBankStat.image = [self getImageFromUrl:self.InfoDict[@"app_bank"]];
+        
+    }
+    
+    if (self.InfoDict[@"coapp_bank"] == nil || [self.InfoDict[@"coapp_bank"]  isEqual: @""] || self.InfoDict[@"coapp_bank"] == (id)[NSNull null]) {
+        // nil branch
+        self.lblCoappBankStat.text = @"";
+    } else {
+        // category name is set
+        self.lblCoappBankStat.text = self.InfoDict[@"coapp_bank"];
+        imgViewCoappBankStat.image = [self getImageFromUrl:self.InfoDict[@"coapp_bank"]];
+        
+    }
+    
+    }
 
 -(UIImage *)getImageFromUrl :(NSString *)url{
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
     return  [UIImage imageWithData: imageData];
 }
 -(void)viewWillAppear:(BOOL)animated{
-//    if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblApplPan.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
-//
-//    }
-//
-//    if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblApplAdhar.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
-//
-//    }
-//
-//
-//
-//    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblCoAppPan.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
-//
-//    }
-//
-//    if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblCoappAdhar.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
-//
-//    }
 
     
 }
 -(void)viewDidAppear:(BOOL)animated{
-//    if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblApplPan.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
-//
-//    }
-//
-//    if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblApplAdhar.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
-//
-//    }
-//
-//
-//
-//    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblCoAppPan.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
-//
-//    }
-//
-//    if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
-//        // nil branch
-//        self->_lblCoappAdhar.text = @"null";
-//    } else {
-//        // category name is set
-//        self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
-//
-//    }
-//
-//
+
+
 }
 - (void)addBackButtonWithImageName:(NSString *)imageName {
     // init your custom button, or your custom view
@@ -254,9 +197,7 @@
 - (IBAction)btnAppAadharClicked:(id)sender {
         [self TakeImage : Tag_AppAdhar];
 }
-//- (IBAction)btnAppAdharClicked:(id)sender {
-//    [self TakeImage : Tag_AppAdhar];
-//}
+
 - (IBAction)btnCoappPanClicked:(id)sender {
      [self TakeImage : Tag_CoPan];
 }
@@ -270,14 +211,7 @@
     if ([self selectImageValidation:_imgViewAppPan.image]) {
         [self uploadImage:@"applicant_pancard" :_imgViewAppPan.image];
         
-//        if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
-//                    // nil branch
-//                    self->_lblApplPan.text = @"null";
-//                } else {
-//                    // category name is set
-//                    self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
-//
-//                }
+
       }
    }
 - (IBAction)btnapplAdharUploadClicked:(id)sender {
@@ -288,15 +222,7 @@
 - (IBAction)btncoaplPanUploadClicked:(id)sender {
     if ([self selectImageValidation:imgViewCoAppPan.image]) {
     [self uploadImage:@"coapplicant_pancard" :imgViewCoAppPan.image];
-        
-//    if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
-//                    // nil branch
-//        self->_lblCoAppPan.text = @"null";
-//        } else {
-//                    // category name is set
-//            self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
-//
-//    }
+    
     }
 }
 - (IBAction)btncoaplAdharUploadClicked:(id)sender {
@@ -367,7 +293,12 @@ popup.tag = tag;
         imgViewAppAdhar.image = chosenImage;
     }if (picker.view.tag == Tag_AppPan) {
         self.imgViewAppPan.image = chosenImage;
+    }if (picker.view.tag == Tag_AppBankStat){
+        imgViewAppBankStat.image = chosenImage;
+    }if (picker.view.tag == Tag_CoAppBankStat){
+        imgViewCoappBankStat.image = chosenImage;
     }
+    
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)uploadImage:(NSString *)urlType :(UIImage *)selctedImage{
@@ -385,10 +316,7 @@ popup.tag = tag;
     [params setObject:self.InfoDict[@"bknum"]  forKey:@"bknum"];
     [params setObject:self.InfoDict[@"proj_name"]  forKey:@"project_name"];
     [params setObject:self.InfoDict[@"name1"]  forKey:@"customer_name"];
-//    [params setObject:self.InfoDict[@"app_pan"]  forKey:@"app_pan"];
-//    [params setObject:self.InfoDict[@"app_aadh"]  forKey:@"app_aadh"];
-//    [params setObject:self.InfoDict[@"coapp_pan"]  forKey:@"coapp_pan"];
-//    [params setObject:self.InfoDict[@"coapp_aadh"]  forKey:@"coapp_aadh"];
+
     
     [params setObject:urlType  forKey:@"request_type"];
     //This need to be change
@@ -406,56 +334,36 @@ popup.tag = tag;
        NSMutableDictionary * dict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         NSLog(@"JSON: %@", dict);
         
-//        
-//        if (self->_InfoDict[@"app_pan"] == nil || self->_InfoDict[@"app_pan"] == (id)[NSNull null]) {
-//            // nil branch
-//            self->_lblApplPan.text = @"null";
-//        } else {
-//            // category name is set
-//            self->_lblApplPan.text = self->_InfoDict[@"app_pan"];
-//
-//        }
-//        
-//        if (self->_InfoDict[@"app_aadh"] == nil || self->_InfoDict[@"app_aadh"] == (id)[NSNull null]) {
-//            // nil branch
-//            self->_lblApplAdhar.text = @"null";
-//        } else {
-//            // category name is set
-//            self->_lblApplAdhar.text = self->_InfoDict[@"app_aadh"];
-//            
-//        }
-//
-//
-//
-//        if (self->_InfoDict[@"coapp_pan"] == nil || self->_InfoDict[@"coapp_pan"] == (id)[NSNull null]) {
-//            // nil branch
-//            self->_lblCoAppPan.text = @"null";
-//        } else {
-//            // category name is set
-//            self->_lblCoAppPan.text = self->_InfoDict[@"coapp_pan"];
-//
-//        }
-//
-//        if (self->_InfoDict[@"coapp_aadh"] == nil || self->_InfoDict[@"coapp_aadh"] == (id)[NSNull null]) {
-//            // nil branch
-//            self->_lblCoappAdhar.text = @"null";
-//        } else {
-//            // category name is set
-//            self->_lblCoappAdhar.text = self->_InfoDict[@"coapp_aadh"];
-//
-//        }
-//        
-//        
         
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:dict[@"msg"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
-        [indicator stopAnimating];
+        [self->indicator stopAnimating];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-        [indicator stopAnimating];
+        [self->indicator stopAnimating];
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Xrbia" message:@"Failed to submit request"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }];
+}
+- (IBAction)btnAppBankStatClicked:(id)sender {
+     [self TakeImage : Tag_AppBankStat];
+}
+- (IBAction)btnAppBankStatUploadClicked:(id)sender {
+    if ([self selectImageValidation:imgViewAppBankStat.image]) {
+        [self uploadImage:@"applicant_bstate" : imgViewAppBankStat.image];
+        
+        
+    }
+    
+}
+- (IBAction)btnCoAppBankStatClicked:(id)sender {
+    [self TakeImage : Tag_CoAppBankStat];
+
+}
+- (IBAction)btnCoAppBankStatUploadClicked:(id)sender {
+    if ([self selectImageValidation:imgViewCoappBankStat.image]) {
+        [self uploadImage:@"coapplicant_bstate" :imgViewCoappBankStat.image];
+    }
 }
 
 

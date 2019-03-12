@@ -42,16 +42,7 @@
     //   horizontallbl.backgroundColor = [UIColor colorWithHexString:@"#004c00"];
     horizontallbl.font=[UIFont boldSystemFontOfSize:screenRect.size.width*0.055];
      horizontallbl.text = @"DOC";
-//    if ([ocrStr isEqualToString:@"OCRStr"]){
-//        horizontallbl.text = @"OCR";
-//        
-//    }else if ([sdcStr isEqualToString:@"SDCStr"]){
-//        horizontallbl.text = @"SDC";
-//        
-//    }else{
-//        horizontallbl.text = @"BAC";
-//        
-//    }
+
     [horizontallbl setTextColor:[UIColor whiteColor]];
     horizontallbl.textAlignment = NSTextAlignmentCenter;
     [navigationView addSubview:horizontallbl];
@@ -66,8 +57,14 @@
     [indicator bringSubviewToFront:self.view];
     indicator.layer.cornerRadius=15.0f;
     
-    
-   // [self loadDocFollowupData];
+    indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.frame = CGRectMake(screenRect.size.width *0.35, screenRect.size.height *0.40, screenRect.size.width *0.30,screenRect.size.width *0.30);
+    indicator.color=[UIColor whiteColor];
+    indicator.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:0.3];
+    [self.view addSubview:indicator];
+    [indicator bringSubviewToFront:self.view];
+    indicator.layer.cornerRadius=15.0f;
+  
 
     
 }

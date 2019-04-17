@@ -61,7 +61,7 @@
     [filtbtn setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:filtbtn];
     
-    if ([comestr isEqualToString:@"Retention"]) {
+    if ([comestr isEqualToString:@"Retention\nBooking"]) {
         horizontallbl.text=@"Retention";
     }
     else{
@@ -114,7 +114,7 @@
     [params setObject:[prefs objectForKey:@"user_id"]  forKey:@"userid"];
    if ([[prefs objectForKey:@"role_name"] isEqualToString:@"Sales Manager"]||[[prefs objectForKey:@"role_name"] isEqualToString:@"Escalation_Manager"]||[[prefs objectForKey:@"role_name"] isEqualToString:@"Retention_Manager"])
    {
-        if ([comestr isEqualToString:@"Retention"]) {
+        if ([comestr isEqualToString:@"Retention\nBooking"]) {
             [params setObject:@"ret_details"  forKey:@"table_name"];
             [params setObject:@"mg_empcode"  forKey:@"field_name"];
         }
@@ -126,7 +126,7 @@
     }
     else
     {
-        if ([comestr isEqualToString:@"Retention"]) {
+        if ([comestr isEqualToString:@"Retention\nBooking"]) {
             [params setObject:@"ret_details"  forKey:@"table_name"];
             [params setObject:@"sr_empcode"  forKey:@"field_name"];
         }
@@ -221,7 +221,7 @@
     //  NSString*   urlString = @"http://13.126.129.245/xrbia/mobilecrm/cp/getbac.php?";
     NSString* urlString=[[NSString alloc]init];;
 
-    if ([comestr isEqualToString:@"Retention"]) {
+    if ([comestr isEqualToString:@"Retention\nBooking"]) {
         urlString = [[NSString alloc]initWithFormat:@"%@getret.php?",[prefs objectForKey:@"Link"]];
     }
     else
@@ -264,7 +264,7 @@
     [params setObject:@"S" forKey:@"mode"];
     
     NSString* urlString=[[NSString alloc]init];
-    if ([comestr isEqualToString:@"Retention"]) {
+    if ([comestr isEqualToString:@"Retention\nBooking"]) {
         urlString = [[NSString alloc]initWithFormat:@"%@getret.php?",[prefs objectForKey:@"Link"]];
     }
     else
@@ -522,7 +522,7 @@
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:MyIdentifier];
-            if ([comestr isEqualToString:@"Retention"]) {
+            if ([comestr isEqualToString:@"Retention\nBooking"]) {
                 
                 UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(screenRect.size.width*0.02,0,screenRect.size.width*0.96,screenRect.size.height*0.70)];
                 headerView.backgroundColor=[UIColor whiteColor];
@@ -1186,7 +1186,7 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     if (tableView==tableViewHome)
     {
-          if ([comestr isEqualToString:@"Retention"])
+          if ([comestr isEqualToString:@"Retention\nBooking"])
           {
               return screenRect.size.height*0.71;
           }
@@ -1375,7 +1375,7 @@
     [params setObject:[dict objectForKey:@"bknum"]  forKey:@"bookingno"];
     NSString*   urlString;
     
-    if ([comestr isEqualToString:@"Retention"])
+    if ([comestr isEqualToString:@"Retention\nBooking"])
      urlString = [[NSString alloc]initWithFormat:@"%@updateret.php?",[prefs objectForKey:@"Link"]];
     else
         urlString = [[NSString alloc]initWithFormat:@"%@updateesc.php?",[prefs objectForKey:@"Link"]];
@@ -1422,7 +1422,7 @@
             textstr=[NSString stringWithFormat:@"%@%@",textField.text,string];
         }
        
-        if([comestr isEqualToString:@"Retention"])
+        if([comestr isEqualToString:@"Retention\nBooking"])
         {
             for (int i=0; i<_totalarr.count; i++) {
                 NSDictionary *tempdict=[_totalarr objectAtIndex:i];
@@ -1516,7 +1516,7 @@
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
     [params setObject:@"Savecalldata"  forKey:@"requestType"];
     
-     if ([comestr isEqualToString:@"Retention"])
+     if ([comestr isEqualToString:@"Retention\nBooking"])
      {    [params setObject:@"Ret" forKey:@"module"];
          [params setObject:[dict objectForKey:@"name"] forKey:@"name"];
          [params setObject:[dict objectForKey:@"project_id"] forKey:@"projectname"];

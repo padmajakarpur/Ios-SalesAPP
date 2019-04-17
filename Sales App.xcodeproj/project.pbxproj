@@ -68,6 +68,12 @@
 		11471B6A2046CB7E00FB7822 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 11471B662046CB7D00FB7822 /* youtube.png */; };
 		11471B6E2046CF8900FB7822 /* ProspectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11471B6C2046CF8900FB7822 /* ProspectViewController.m */; };
 		11471B6F2046CF8900FB7822 /* ProspectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11471B6D2046CF8900FB7822 /* ProspectViewController.xib */; };
+		114785BD2265A82F00BB19A3 /* RetentionBookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 114785BB2265A82F00BB19A3 /* RetentionBookingVC.m */; };
+		114785BE2265A82F00BB19A3 /* RetentionBookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114785BC2265A82F00BB19A3 /* RetentionBookingVC.xib */; };
+		1147BD322261A30E00BB6E58 /* InventoryDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147BD302261A30E00BB6E58 /* InventoryDetailsVC.m */; };
+		1147BD332261A30E00BB6E58 /* InventoryDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147BD312261A30E00BB6E58 /* InventoryDetailsVC.xib */; };
+		1147BD372261B1B700BB6E58 /* InventoryDetailsCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147BD352261B1B700BB6E58 /* InventoryDetailsCustomCell.m */; };
+		1147BD382261B1B700BB6E58 /* InventoryDetailsCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147BD362261B1B700BB6E58 /* InventoryDetailsCustomCell.xib */; };
 		1149E11821D4FD9A0044D90A /* TodayBookingBACVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1149E11621D4FD9A0044D90A /* TodayBookingBACVC.m */; };
 		1149E11921D4FD9A0044D90A /* TodayBookingBACVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1149E11721D4FD9A0044D90A /* TodayBookingBACVC.xib */; };
 		114BD4162047DAD700AC4D7E /* MyVisitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114BD4142047DAD700AC4D7E /* MyVisitsViewController.m */; };
@@ -361,6 +367,15 @@
 		11471B6B2046CF8900FB7822 /* ProspectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProspectViewController.h; sourceTree = "<group>"; };
 		11471B6C2046CF8900FB7822 /* ProspectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProspectViewController.m; sourceTree = "<group>"; };
 		11471B6D2046CF8900FB7822 /* ProspectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProspectViewController.xib; sourceTree = "<group>"; };
+		114785BA2265A82F00BB19A3 /* RetentionBookingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetentionBookingVC.h; sourceTree = "<group>"; };
+		114785BB2265A82F00BB19A3 /* RetentionBookingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetentionBookingVC.m; sourceTree = "<group>"; };
+		114785BC2265A82F00BB19A3 /* RetentionBookingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetentionBookingVC.xib; sourceTree = "<group>"; };
+		1147BD2F2261A30E00BB6E58 /* InventoryDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryDetailsVC.h; sourceTree = "<group>"; };
+		1147BD302261A30E00BB6E58 /* InventoryDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InventoryDetailsVC.m; sourceTree = "<group>"; };
+		1147BD312261A30E00BB6E58 /* InventoryDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryDetailsVC.xib; sourceTree = "<group>"; };
+		1147BD342261B1B700BB6E58 /* InventoryDetailsCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryDetailsCustomCell.h; sourceTree = "<group>"; };
+		1147BD352261B1B700BB6E58 /* InventoryDetailsCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InventoryDetailsCustomCell.m; sourceTree = "<group>"; };
+		1147BD362261B1B700BB6E58 /* InventoryDetailsCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryDetailsCustomCell.xib; sourceTree = "<group>"; };
 		1149E11521D4FD9A0044D90A /* TodayBookingBACVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayBookingBACVC.h; sourceTree = "<group>"; };
 		1149E11621D4FD9A0044D90A /* TodayBookingBACVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayBookingBACVC.m; sourceTree = "<group>"; };
 		1149E11721D4FD9A0044D90A /* TodayBookingBACVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayBookingBACVC.xib; sourceTree = "<group>"; };
@@ -682,9 +697,20 @@
 			path = "Booking Form Incomplete ";
 			sourceTree = "<group>";
 		};
+		1147BD2E2261A2CC00BB6E58 /* Inventory Details */ = {
+			isa = PBXGroup;
+			children = (
+				1147BD2F2261A30E00BB6E58 /* InventoryDetailsVC.h */,
+				1147BD302261A30E00BB6E58 /* InventoryDetailsVC.m */,
+				1147BD312261A30E00BB6E58 /* InventoryDetailsVC.xib */,
+			);
+			path = "Inventory Details";
+			sourceTree = "<group>";
+		};
 		1149E10A21D4E4A80044D90A /* New changes */ = {
 			isa = PBXGroup;
 			children = (
+				1147BD2E2261A2CC00BB6E58 /* Inventory Details */,
 				113FBCB82226675F00CDD17E /* Document Collection VC */,
 				114C1853220EA44C00360728 /* EscalatedVC New Changes */,
 				114607E321E86E9B00260961 /* Booking Form Incomplete  */,
@@ -707,6 +733,9 @@
 		114C1853220EA44C00360728 /* EscalatedVC New Changes */ = {
 			isa = PBXGroup;
 			children = (
+				114785BA2265A82F00BB19A3 /* RetentionBookingVC.h */,
+				114785BB2265A82F00BB19A3 /* RetentionBookingVC.m */,
+				114785BC2265A82F00BB19A3 /* RetentionBookingVC.xib */,
 			);
 			path = "EscalatedVC New Changes";
 			sourceTree = "<group>";
@@ -726,6 +755,9 @@
 				113FBCC12226725900CDD17E /* DocFollowupCell.h */,
 				113FBCC22226725900CDD17E /* DocFollowupCell.m */,
 				113FBCC32226725900CDD17E /* DocFollowupCell.xib */,
+				1147BD342261B1B700BB6E58 /* InventoryDetailsCustomCell.h */,
+				1147BD352261B1B700BB6E58 /* InventoryDetailsCustomCell.m */,
+				1147BD362261B1B700BB6E58 /* InventoryDetailsCustomCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -1327,6 +1359,7 @@
 				114BD4172047DAD700AC4D7E /* MyVisitsViewController.xib in Resources */,
 				11B5166B206F857000B8189E /* RemainingViewController.xib in Resources */,
 				1157DAB2202C72A300656307 /* account_circle.png in Resources */,
+				1147BD382261B1B700BB6E58 /* InventoryDetailsCustomCell.xib in Resources */,
 				11321E7D202B0FDA00DBA73F /* MaterialIcons-Regular.ttf in Resources */,
 				11B39A1420D9155600CCECDD /* EvenrtDatailsViewController.xib in Resources */,
 				11B51664206F663C00B8189E /* BroucherViewController.xib in Resources */,
@@ -1345,8 +1378,10 @@
 				1139850A2045715700AE9252 /* AddLeadViewController.xib in Resources */,
 				1157DAAD202C5BE500656307 /* MyLeadsViewController.xib in Resources */,
 				119B66702091E3D90031FC3D /* 87x87.jpg in Resources */,
+				114785BE2265A82F00BB19A3 /* RetentionBookingVC.xib in Resources */,
 				1133872A20EB97CD0074CC90 /* RemarkViewController.xib in Resources */,
 				115385E82029827F0070BE0E /* Filter icon.png in Resources */,
+				1147BD332261A30E00BB6E58 /* InventoryDetailsVC.xib in Resources */,
 				11405CFA21EF499400CFD780 /* ChangeStatusBkngFormIncVC.xib in Resources */,
 				11F2BDA4211429EF003E22D1 /* CollectChequeViewController.xib in Resources */,
 				1144AB502179BBF000A06E1A /* BackOfficeinfoViewController.xib in Resources */,
@@ -1572,6 +1607,7 @@
 				11DE8B9920CF9E2F005927F4 /* TodaysVistViewController.m in Sources */,
 				11D4001C20E110B0001F1E68 /* NewCasesvViewController.m in Sources */,
 				11A2CFEA2053A33D00BC62F2 /* OCRViewController.m in Sources */,
+				1147BD372261B1B700BB6E58 /* InventoryDetailsCustomCell.m in Sources */,
 				1157DAAF202C5F9600656307 /* MainViewController.xib in Sources */,
 				11B51663206F663C00B8189E /* BroucherViewController.m in Sources */,
 				1157DAB0202C5F9600656307 /* RearViewController.xib in Sources */,
@@ -1623,6 +1659,8 @@
 				1157DAAC202C5BE500656307 /* MyLeadsViewController.m in Sources */,
 				11B39A1320D9155600CCECDD /* EvenrtDatailsViewController.m in Sources */,
 				11321E79202AFC8C00DBA73F /* MyBookingViewController.m in Sources */,
+				114785BD2265A82F00BB19A3 /* RetentionBookingVC.m in Sources */,
+				1147BD322261A30E00BB6E58 /* InventoryDetailsVC.m in Sources */,
 				11420549205263D00097305B /* FollowUpViewController.m in Sources */,
 				1133872920EB97CD0074CC90 /* RemarkViewController.m in Sources */,
 				11471B6E2046CF8900FB7822 /* ProspectViewController.m in Sources */,

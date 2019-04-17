@@ -14,6 +14,8 @@
  UIActivityIndicatorView *myActivityIndicator;
 - (void)viewDidLoad {
     [super viewDidLoad];
+     myResultArray = [[NSMutableArray alloc]init];
+    
      screenRect1 = [[UIScreen mainScreen] bounds];
     UIView* navigationView=[[UIView alloc]initWithFrame:CGRectMake(0,0,screenRect1.size.width,screenRect1.size.height*0.10)];
     [self.view addSubview:navigationView];

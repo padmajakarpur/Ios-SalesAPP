@@ -19,6 +19,7 @@
 #import "TodaysViewController.h"
 #import "TodaysVistViewController.h"
 #import <AFNetworking.h>
+#import "InventoryDetailsVC.h"
 @interface SalesHeadViewController ()
 @end
 
@@ -192,7 +193,8 @@
         UIButton *sdbtn=[[UIButton alloc]initWithFrame:CGRectMake(screenRect.size.width*0.55,screenRect.size.height*0.55,screenRect.size.width*0.28,screenRect.size.width*0.28)];
         sdbtn.layer.cornerRadius = screenRect.size.width*0.14;
         [sdbtn setClipsToBounds:YES];
-        [sdbtn setTitle:@"Handover" forState:UIControlStateNormal];
+        [sdbtn setTitle:@"Inventory\nDetails" forState:UIControlStateNormal];
+         sdbtn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         [sdbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [sdbtn setTitleColor:[UIColor cyanColor] forState:UIControlStateHighlighted];
         [sdbtn addTarget:self action:@selector(prospect:) forControlEvents:UIControlEventTouchUpInside];
@@ -321,8 +323,11 @@
         [self.navigationController pushViewController:mainvc animated:YES];
     }
     if (btn.tag==6) {
-         SalesHeadHandOverViewController*mainvc=[[SalesHeadHandOverViewController alloc] initWithNibName:@"SalesHeadHandOverViewController" bundle:nil];
-        [self.navigationController pushViewController:mainvc animated:YES];
+        //*****COMMENT*******
+//         SalesHeadHandOverViewController*mainvc=[[SalesHeadHandOverViewController alloc] initWithNibName:@"SalesHeadHandOverViewController" bundle:nil];
+//        [self.navigationController pushViewController:mainvc animated:YES];
+        InventoryDetailsVC *mainvc=[[InventoryDetailsVC alloc] initWithNibName:@"InventoryDetailsVC" bundle:nil];
+               [self.navigationController pushViewController:mainvc animated:YES];
     }
     if (btn.tag==7) {
         TodaysViewController*mainvc=[[TodaysViewController alloc] initWithNibName:@"TodaysViewController" bundle:nil];

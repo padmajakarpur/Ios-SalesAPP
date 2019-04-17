@@ -30,6 +30,8 @@
 #import "TodaysVistViewController.h"
 #import "BookingFormIncompleteVC.h"
 #import "FollowupDesignVC.h"
+#import "RetentionBookingVC.h"
+
 @interface HomeViewController ()
 
 @end
@@ -282,7 +284,8 @@ followupslbl.hidden=YES;
     handovrbtn.layer.cornerRadius = screenRect.size.width*0.12;
     [handovrbtn setClipsToBounds:YES];
     handovrbtn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [handovrbtn setTitle:@"Hand\nover" forState:UIControlStateNormal];
+   // [handovrbtn setTitle:@"Hand\nover" forState:UIControlStateNormal];
+    [handovrbtn setTitle:@"Retention\nBooking" forState:UIControlStateNormal];
     [handovrbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [handovrbtn setTitleColor:[UIColor cyanColor] forState:UIControlStateHighlighted];
     [handovrbtn addTarget:self action:@selector(prospect:) forControlEvents:UIControlEventTouchUpInside];
@@ -848,9 +851,19 @@ followupslbl.hidden=YES;
         [self.navigationController pushViewController:mainvc animated:YES];
     }
     if (btn.tag==10) {
-        OCRViewController *mainvc=[[OCRViewController alloc] initWithNibName:@"OCRViewController" bundle:nil];
-        mainvc.comestr=@"handover";
+        Retention_ESCViewController *mainvc=[[Retention_ESCViewController alloc] initWithNibName:@"Retention-ESCViewController" bundle:nil];
+        mainvc.comestr=btn.titleLabel.text;
         [self.navigationController pushViewController:mainvc animated:YES];
+        
+//        RetentionBookingVC *mainvc=[[RetentionBookingVC alloc] initWithNibName:@"RetentionBookingVC" bundle:nil];
+//        mainvc.comestr=btn.titleLabel.text;
+//            [self.navigationController pushViewController:mainvc animated:YES];
+   
+        
+        //**************I have commented ***********//
+//        OCRViewController *mainvc=[[OCRViewController alloc] initWithNibName:@"OCRViewController" bundle:nil];
+//        mainvc.comestr=@"handover";
+//        [self.navigationController pushViewController:mainvc animated:YES];
     }
     if (btn.tag==11) {
         OCRViewController *mainvc=[[OCRViewController alloc] initWithNibName:@"OCRViewController" bundle:nil];

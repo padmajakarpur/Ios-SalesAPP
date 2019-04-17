@@ -10,12 +10,17 @@
 #import "UIColor+Expanded.h"
 #import <AFNetworking.h>
 #import "SWRevealViewController.h"
+
+
+
 @interface OCRViewController ()
 
 @end
 
 @implementation OCRViewController
 @synthesize tableViewHome,indicator,bgview,demoView,projectpicker,projectoolbar,projectstr,projectarr,projectstxt,bookingarr,teamtableview,backgroundview,remarktxt,TakePhotoView,scrollview,segmentedControl,searchview,totalarr;
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

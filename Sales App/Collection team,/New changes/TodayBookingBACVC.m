@@ -158,6 +158,8 @@ NSString * CallStr;
         NSDictionary *userDict=[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
         resultArray = [[NSMutableArray alloc]init];
         resultArray = userDict[@"Android"][@"bookings"];
+        //Remove*************************
+        //[self removeallNullValueFromArray:resultArray];
         [self.myTableview reloadData];
         [indicator stopAnimating];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
@@ -169,6 +171,25 @@ NSString * CallStr;
     }];
     }
 
+-(void)removeallNullValueFromArray :(NSMutableArray *)infoArray{
+    
+    if (infoArray.count > 0){
+    NSMutableArray *newMutableArray = [[NSMutableArray alloc]init];
+    for (NSDictionary *dict in infoArray) {
+        [newMutableArray addObject:[dict mutableCopy]];
+    }
+    
+    for (NSMutableDictionary *itemDict in newMutableArray){
+        for (NSString * key in [itemDict allKeys])
+        {
+        if ([[itemDict objectForKey:key] isKindOfClass:[NSNull class]])
+                [itemDict setObject:@"" forKey:key];
+        }
+    }
+        
+    resultArray = [newMutableArray mutableCopy];
+    }
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

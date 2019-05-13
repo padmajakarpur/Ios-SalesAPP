@@ -81,15 +81,17 @@
 }
 -(void)dismissKeyboard {
     [_txtUnit_no resignFirstResponder];
+   
 }
 -(void)ShowCancel{
     [self.view endEditing:YES];
+    
 }
 -(void)ShowSelectedPicker{
     NSInteger selectedRow = [pickerView selectedRowInComponent:0];
    // _txtProjectList.text = [resultArray objectAtIndex:selectedRow];
     NSArray *tempObj = [resultArray objectAtIndex:selectedRow];
-    self.txtProjectList.text = [tempObj valueForKey:@"proj_name"];
+    self.txtProjectList.text = [tempObj valueForKey:@"name"];
     [_txtProjectList resignFirstResponder];
 }
 - (void)addBackButtonWithImageName:(NSString *)imageName {
@@ -138,17 +140,17 @@
     }
     NSArray *tempObj = resultArray1[indexPath.row];
    //
-    if ([tempObj valueForKey:@"proj_name"] == [NSNull null]) {
+    if ([tempObj valueForKey:@"project_name"] == [NSNull null]) {
         cell.lblProjName.text = @"";
     }else{
-        cell.lblProjName.text = [tempObj valueForKey:@"proj_name"];
+        cell.lblProjName.text = [tempObj valueForKey:@"project_name"];
     }
     
    
-    if ([tempObj valueForKey:@"unit_no"] == [NSNull null]) {
+    if ([tempObj valueForKey:@"unit_number"] == [NSNull null]) {
         cell.lblUnit_No.text = @"";
     }else{
-        cell.lblUnit_No.text = [tempObj valueForKey:@"unit_no"];
+        cell.lblUnit_No.text = [tempObj valueForKey:@"unit_number"];
     }
     
     if ([tempObj valueForKey:@"flat_cat"] == [NSNull null]) {
@@ -202,12 +204,12 @@
 -(void)loadProjectListData{
     //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
    // NSString * userId = [prefs objectForKey:@"user_id"];
-    NSString*   urlString = [[NSString alloc]initWithFormat:@"http://13.126.129.245/xrbia/mobilecrm/eden/get_project.php"];
+    NSString*   urlString = [[NSString alloc]initWithFormat:@"http://13.126.129.245/xrbia/mobilecrm/sales/getsyncproject.php?"];
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
    // [params setObject:userId forKey:@"user_id"];
     //************REMOVE HARDCODE********//
     // [params setObject:@"74563cbf-d690-f45f-8916-599acc92ae49" forKey:@"user_id"];
-    [params setObject:@"get_list" forKey:@"requestType"];
+   // [params setObject:@"get_list" forKey:@"requestType"];
    // [params setObject:@"BS" forKey:@"mode"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -241,13 +243,13 @@
 {
     //return [resultArray objectAtIndex:row];
     NSArray *tempObj = [resultArray objectAtIndex:row];
-    return [tempObj valueForKey:@"proj_name"];
+    return [tempObj valueForKey:@"name"];
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     //self.txtProjectList.text=[resultArray objectAtIndex:row];
      NSArray *tempObj = [resultArray objectAtIndex:row];
-    self.txtProjectList.text = [tempObj valueForKey:@"proj_name"];
+    self.txtProjectList.text = [tempObj valueForKey:@"name"];
 }
 - (IBAction)btnSubmitClicked:(id)sender {
     if([_txtProjectList.text isEqualToString:@""] || [_txtUnit_no.text isEqualToString:@""] )

@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535622"
+            timestampString = "577360136.255119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535702"
+            timestampString = "577360136.25519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -52,7 +52,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535762"
+            timestampString = "577360136.255245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
@@ -115,7 +115,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535817"
+            timestampString = "577360136.255295"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
@@ -131,7 +131,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535871"
+            timestampString = "577360136.255344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
@@ -147,7 +147,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535924"
+            timestampString = "577360136.25539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "301"
@@ -163,7 +163,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.535974"
+            timestampString = "577360136.255438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
@@ -179,7 +179,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.536024"
+            timestampString = "577360136.255484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "189"
@@ -275,7 +275,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/TodayBookingBACVC.m"
-            timestampString = "574262268.537326"
+            timestampString = "577360136.255638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
@@ -307,11 +307,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.666882"
+            timestampString = "577871515.765523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "-textFieldDidBeginEditing:"
             landmarkType = "7">
          </BreakpointContent>
@@ -323,11 +323,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.667649"
+            timestampString = "577871515.765594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-loadProjectListData"
             landmarkType = "7">
          </BreakpointContent>
@@ -339,23 +339,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.668182"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "-loadProjectListData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.668614"
+            timestampString = "577871515.765649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
@@ -371,11 +355,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.668996"
+            timestampString = "577871515.765699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "-loadProjectListData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
+            timestampString = "577871515.765746"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-ShowSelectedPicker"
             landmarkType = "7">
          </BreakpointContent>
@@ -387,11 +387,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.669383"
+            timestampString = "577871515.765792"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "-btnSubmitClicked:"
             landmarkType = "7">
          </BreakpointContent>
@@ -403,11 +403,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.6697249"
+            timestampString = "577871515.765837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "-loadSubmitData"
             landmarkType = "7">
          </BreakpointContent>
@@ -419,11 +419,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.670076"
+            timestampString = "577871515.765882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "-loadSubmitData"
             landmarkType = "7">
             <Locations>
@@ -435,12 +435,12 @@
                   moduleName = "Sales App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/Collection%20team,/New%20changes/Inventory%20Details/InventoryDetailsVC.m"
-                  timestampString = "577109181.0098259"
+                  timestampString = "578993235.77213"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "281"
-                  endingLineNumber = "281"
-                  offsetFromSymbolStart = "951">
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "940">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -450,57 +450,57 @@
                   moduleName = "Sales App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/Collection%20team,/New%20changes/Inventory%20Details/InventoryDetailsVC.m"
-                  timestampString = "577109181.014255"
+                  timestampString = "578993235.774521"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "281"
-                  endingLineNumber = "281"
-                  offsetFromSymbolStart = "463">
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "516">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.273"
+                  symbolName = "__copy_helper_block_.277"
                   moduleName = "Sales App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/Collection%20team,/New%20changes/Inventory%20Details/InventoryDetailsVC.m"
-                  timestampString = "577109181.017585"
+                  timestampString = "578993235.779122"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "274"
-                  endingLineNumber = "274"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__36-[InventoryDetailsVC loadSubmitData]_block_invoke.276"
+                  symbolName = "__36-[InventoryDetailsVC loadSubmitData]_block_invoke.280"
                   moduleName = "Sales App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/Collection%20team,/New%20changes/Inventory%20Details/InventoryDetailsVC.m"
-                  timestampString = "577109181.020987"
+                  timestampString = "578993235.783089"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "281"
-                  endingLineNumber = "281"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.278"
+                  symbolName = "__destroy_helper_block_.282"
                   moduleName = "Sales App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/Collection%20team,/New%20changes/Inventory%20Details/InventoryDetailsVC.m"
-                  timestampString = "577109181.024453"
+                  timestampString = "578993235.785395"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "281"
-                  endingLineNumber = "281"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -512,11 +512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.6704969"
+            timestampString = "577871515.765928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -528,11 +528,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.670868"
+            timestampString = "577871515.765972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -544,11 +544,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.671254"
+            timestampString = "577871515.766017"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "7">
          </BreakpointContent>
@@ -560,11 +560,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.671625"
+            timestampString = "577871515.766062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "-numberOfComponentsInPickerView:"
             landmarkType = "7">
          </BreakpointContent>
@@ -576,11 +576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.671994"
+            timestampString = "577871515.766107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-pickerView:numberOfRowsInComponent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -592,11 +592,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
-            timestampString = "577017357.6724139"
+            timestampString = "577871515.766152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1478,6 +1478,245 @@
             startingLineNumber = "1401"
             endingLineNumber = "1401"
             landmarkName = "-submit"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/Collection team,/New changes/Inventory Details/InventoryDetailsVC.m"
+            timestampString = "577871515.767212"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "-loadSubmitData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.21847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-checkversion"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.218941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-checkversion"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[AppDelegate checkversion]_block_invoke.104"
+                  moduleName = "Sales App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/AppDelegate.m"
+                  timestampString = "578993236.221233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.107"
+                  moduleName = "Sales App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/AppDelegate.m"
+                  timestampString = "578993236.224281"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.219223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-alertView:clickedButtonAtIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.219503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.219775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-checkversion"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate checkversion]"
+                  moduleName = "Sales App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/AppDelegate.m"
+                  timestampString = "578993236.251999"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "648">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[AppDelegate checkversion]_block_invoke"
+                  moduleName = "Sales App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/AppDelegate.m"
+                  timestampString = "578993236.2544889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "Sales App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/infinitum/Desktop/CompanyProjectsGit/Ios-SalesAPP/Sales%20App/AppDelegate.m"
+                  timestampString = "578993236.257569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.220046"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-checkversion"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.220314"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-checkversion"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.220615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-checkversion"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sales App/AppDelegate.m"
+            timestampString = "578993235.220889"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-checkversion"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

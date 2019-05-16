@@ -20,16 +20,18 @@
 @property (nonatomic, retain) UIView *bottmborder1,*bottmborder2,*bottmborder3,*bottmborder4,*view1,*view2,*view3,*view4,*view5,*bottmborder5,*demoView,*checkboxview;
 @end
 @implementation AddbookingViewController
-@synthesize scrollView,step1btn,step2btn,step3btn,step4btn,nametxt,buildingtxt,sitestr,sitenamearr,sitenametoolbar,sitenamepickerview,collectioonview,step5btn,projectnamearr,projectnamestr,projectpickerview,projectnametoolbar,TakePhotoView,view2scrollview,schemearr,schemestr,schemetxt,schemetoolbar,schemepickerview,descontvaluetxt,discountremarktxt,revisedagrttxt,tableViewHome,custaddrtxt,custnametxt,custemailtxt,custmobnotxt,custSourcetxt,numberToolbarzip,view5scrollview,bankamountxt,typeofpayment,typeofpaymentstr,typeofpaymentoolbar,typeofpaymentpicker,Typeofpaymentarr,checktableview,addbtn,captureimgbtn,capturebookingbtn,remainingtxt,rmarktxt,chequeimage,bookingimage,indicator,siteidstr,unitsarr,flatyplbl2,unitlbl2,carlbl2,redcarpetlbl2,totalagrlbl2,totalarwlbl2,schemeidstr,agrementvaluetxt,registrationchartxt,stampdutytxt,gstlbltxt,legaldocchartxt,totalcosttxt,pamentschemetxt,handedovertotext,amounttxt,comefromstr,projectarr,revisedagrementvaluetxt,cibiltext,Customertypetxt,customertypestr,customertypepicker,customertypetoolbar,customertypearr,step3radiobtn,remaingbtn,businessdetailstxt,sourcetxt,sourcedict,sourcestr,sourcearr,sourcepicker,sourcetoolbar,paymentgateybtn,flooridstr,floorno,chequeinstrumentdatetxt,chequeimage2,chequeimage3,chequeimagecollectionview,imagerarr,datePicker,countrcodetxt,countrytoolbar,countrpicker,countryarr,countrstr,finalbookbtn,timer,approvebtn,chequeAmountxt,remainingamtdict,unitlbl,assignlbl,view4scrollview,bk_numstr,indexarray;
+@synthesize scrollView,step1btn,step2btn,step3btn,step4btn,nametxt,buildingtxt,sitestr,sitenamearr,sitenametoolbar,sitenamepickerview,collectioonview,step5btn,projectnamearr,projectnamestr,projectpickerview,projectnametoolbar,TakePhotoView,view2scrollview,schemearr,schemestr,schemetxt,schemetoolbar,schemepickerview,descontvaluetxt,discountremarktxt,revisedagrttxt,tableViewHome,custaddrtxt,custnametxt,custemailtxt,custmobnotxt,custSourcetxt,numberToolbarzip,view5scrollview,bankamountxt,typeofpayment,typeofpaymentstr,typeofpaymentoolbar,typeofpaymentpicker,Typeofpaymentarr,checktableview,addbtn,captureimgbtn,capturebookingbtn,remainingtxt,rmarktxt,chequeimage,bookingimage,indicator,siteidstr,unitsarr,flatyplbl2,unitlbl2,carlbl2,redcarpetlbl2,totalagrlbl2,totalarwlbl2,schemeidstr,agrementvaluetxt,registrationchartxt,stampdutytxt,gstlbltxt,legaldocchartxt,totalcosttxt,pamentschemetxt,handedovertotext,amounttxt,comefromstr,projectarr,revisedagrementvaluetxt,cibiltext,Customertypetxt,customertypestr,customertypepicker,customertypetoolbar,customertypearr,step3radiobtn,remaingbtn,businessdetailstxt,sourcetxt,sourcedict,sourcestr,sourcearr,sourcepicker,sourcetoolbar,paymentgateybtn,flooridstr,floorno,chequeinstrumentdatetxt,chequeimage2,chequeimage3,chequeimagecollectionview,imagerarr,datePicker,countrcodetxt,countrytoolbar,countrpicker,countryarr,countrstr,finalbookbtn,timer,approvebtn,chequeAmountxt,remainingamtdict,unitlbl,assignlbl,view4scrollview,bk_numstr,indexarray,schemetxt1,myArray,schemetoolbar1;
 
 NSMutableArray *colorNames;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    myArray=[[NSMutableArray alloc]initWithObjects:@"A",@"B", nil];
     // Do any additional setup after loading the view from its nib.
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     _buildingarr=[[NSMutableArray alloc]init];
     sitenamearr=[[NSMutableArray alloc]init];
     _siteidarr=[[NSMutableArray alloc]init];
+    myArray=[[NSMutableArray alloc]init];
     siteidstr=[[NSString alloc]init];
     _schemeidarr=[[NSMutableArray alloc]init];
     schemeidstr=[[NSString alloc]init];
@@ -246,6 +248,38 @@ _projectidstr=[[NSString alloc]init];
         schemetxt.placeholder=@"Select Scheme*";
         schemetxt.font = [UIFont systemFontOfSize:14];
         [view2scrollview addSubview:schemetxt];
+        
+        
+        //************** My Code
+        hig=screenRect.size.height*0.1;
+        
+        schemetxt1 = [[RPFloatingPlaceholderTextField alloc] initWithFrame:CGRectMake(screenRect.size.width*0.05,hig,screenRect.size.width*0.90,screenRect.size.height*0.07)];
+        schemetxt1.textAlignment=NSTextAlignmentLeft;
+        schemetxt1.delegate = self;
+        schemetxt1.textColor=[UIColor blackColor];
+        [schemetxt1 setBackgroundColor:[UIColor clearColor]];
+        schemetxt1.leftViewMode = UITextFieldViewModeAlways;
+        [schemetxt1 setKeyboardType:UIKeyboardTypeEmailAddress];
+        schemetxt1.returnKeyType=UIReturnKeyDone;
+        schemetxt1.floatingLabelActiveTextColor = [UIColor redColor];
+        schemetxt1.floatingLabelInactiveTextColor = [UIColor grayColor];
+        CALayer *bottomBorders = [CALayer layer];
+        bottomBorders.frame = CGRectMake(0.0f, schemetxt1.frame.size.height - 5, schemetxt1.frame.size.width, 1.0f);
+        bottomBorders.backgroundColor = [UIColor lightGrayColor].CGColor;
+        [schemetxt1.layer addSublayer:bottomBorders];
+        schemetxt1.placeholder=@"Select Bank";
+        schemetxt1.font = [UIFont systemFontOfSize:14];
+        [view2scrollview addSubview:schemetxt1];
+        
+        ////****************
+        
+        
+        
+        
+        
+        
+        
+        
         
         hig=hig+screenRect.size.height*0.1;
         
@@ -4207,6 +4241,7 @@ NSString * businesdecstr,*empdecdetailstr;
         [sourcetxt resignFirstResponder];
         return NO;
     }
+   
     if (textField ==schemetxt) {
         
         NSMutableArray * arr=[_flatdetailsdict objectForKey:@"schemes"];
@@ -4237,6 +4272,12 @@ NSString * businesdecstr,*empdecdetailstr;
         if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone) {
             schemetoolbar= [[UIToolbar alloc] initWithFrame:CGRectMake(0,screenRect.size.height*0.57,self.view.bounds.size.width,44)];
         }
+        //****** my code
+        if (textField == schemetxt1){
+            schemetoolbar1 = [[UIToolbar alloc] initWithFrame:CGRectMake(0,screenRect.size.height*0.57,self.view.bounds.size.width,64)];
+        }
+        
+        
         else{
             schemetoolbar= [[UIToolbar alloc] initWithFrame:CGRectMake(0,screenRect.size.height*0.57,self.view.bounds.size.width,64)];
         }
@@ -4259,7 +4300,13 @@ NSString * businesdecstr,*empdecdetailstr;
         schemetoolbar.hidden=NO;
         [schemetxt resignFirstResponder];
         return NO;
-    }
+        
+      
+    
+   
+
+
+    
     if (textField ==typeofpayment) {
         Typeofpaymentarr=[[NSMutableArray alloc]initWithObjects:@"Cheque",@"Cash",@"Card Swipe",@"Online", nil];
         typeofpaymentpicker = [[UIPickerView alloc] init];

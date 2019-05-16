@@ -20,14 +20,14 @@
     NSInteger noofcheque,tag,count,hight,*chequetag,*chequeamounttag,indexcount;
 }
 @property (nonatomic, retain) UIScrollView *scrollView,*view2scrollview,*view5scrollview,*view3scrollview,*view4scrollview,*radioscrollview;
-@property(nonatomic,retain)  RPFloatingPlaceholderTextField * nametxt,*buildingtxt,*schemetxt,*descontvaluetxt,*discountremarktxt,*revisedagrttxt,*custnametxt,*custmobnotxt,*custemailtxt,*custaddrtxt,*custSourcetxt,*Revisedagretxt,*bankamountxt,*typeofpayment,*pamentschemetxt,*revisedagrementvaluetxt,*chequeinstrumentdatetxt,*chequeAmountxt;
+@property(nonatomic,retain)  RPFloatingPlaceholderTextField * nametxt,*buildingtxt,*schemetxt,*schemetxt1,*descontvaluetxt,*discountremarktxt,*revisedagrttxt,*custnametxt,*custmobnotxt,*custemailtxt,*custaddrtxt,*custSourcetxt,*Revisedagretxt,*bankamountxt,*typeofpayment,*pamentschemetxt,*revisedagrementvaluetxt,*chequeinstrumentdatetxt,*chequeAmountxt;
 @property(nonatomic,retain) ACFloatingTextField *rmarktxt,*remainingtxt,*handedovertotext,*amounttxt,*instrumentdatetxt,*lastfourdigitsofcardtxt,*instrumentno,*cibiltext,*Customertypetxt,*businessdetailstxt,*sourcetxt,*countrcodetxt;
 @property (nonatomic, retain) UIButton *step1btn,*step2btn,*step3btn,*step4btn,*step5btn,*addbtn,*captureimgbtn,*capturebookingbtn,*checkbox1,*checkbox2,*checkbox3,*checkbox4,*checkbox5,*checkbox6,*checkbox7,*checkbox8,*checkbox9,*checkbox10,*checkbox11,*checkbox12,*paymentgateybtn,*finalbookbtn,*approvebtn;
-@property(nonatomic,retain) UIToolbar*numberToolbarzip,*sitenametoolbar,*projectnametoolbar,*schemetoolbar,*typeofpaymentoolbar,*customertypetoolbar,*sourcetoolbar,*countrytoolbar;
-@property(nonatomic,retain)NSMutableArray *sitenamearr,*projectnamearr,*schemearr,*tableheadrarr,*Typeofpaymentarr,*buildingarr,*siteidarr,*floorarr,*unitsarr,*schemeidarr,*projectarr,*projectidarr,*customeridarr,*customertypearr,*sourcearr,*imagerarr,*countryarr,*chequeamountarr,*indexarray;
+@property(nonatomic,retain) UIToolbar*numberToolbarzip,*sitenametoolbar,*projectnametoolbar,*schemetoolbar,*typeofpaymentoolbar,*customertypetoolbar,*sourcetoolbar,*countrytoolbar,*schemetoolbar1;
+@property(nonatomic,retain)NSMutableArray *sitenamearr,*projectnamearr,*schemearr,*tableheadrarr,*Typeofpaymentarr,*buildingarr,*siteidarr,*floorarr,*unitsarr,*schemeidarr,*projectarr,*projectidarr,*customeridarr,*customertypearr,*sourcearr,*imagerarr,*countryarr,*chequeamountarr,*indexarray,*myArray;
 @property(nonatomic,retain)NSString *sitestr,*projectnamestr,*schemestr,*typeofpaymentstr,*siteidstr,*buildingstr,*schemeidstr,*comefromstr,*projectidstr,*avaragevaluastr,*customertypestr,*sourcestr,*flooridstr,*floorno,*countrstr,*pkidstr,*bk_numstr;
 @property (retain, nonatomic) IBOutlet UICollectionView *collectioonview,*chequeimagecollectionview;
-@property(nonatomic,retain) IBOutlet UIPickerView *sitenamepickerview,*projectpickerview,*schemepickerview,*typeofpaymentpicker,*customertypepicker,*sourcepicker,*countrpicker;
+@property(nonatomic,retain) IBOutlet UIPickerView *sitenamepickerview,*projectpickerview,*schemepickerview,*typeofpaymentpicker,*customertypepicker,*sourcepicker,*countrpicker,*schemepickerview1;
 @property(nonatomic,retain) CustomIOS7AlertView *TakePhotoView;
 @property(nonatomic,retain) IBOutlet UITableView *tableViewHome,*checktableview;
 @property(nonatomic,retain) IBOutlet UIImageView *chequeimage,*bookingimage,*chequeimage2,*chequeimage3;
